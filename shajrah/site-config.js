@@ -8,5 +8,5 @@
  * 4. Copy Measurement ID (format G-XXXXXXXXXX) and paste below.
  */
 window.SITE_CONFIG = {
-  gaMeasurementId: "",
+  gaMeasurementId: "G-QLZ8SD6K40",
 };
