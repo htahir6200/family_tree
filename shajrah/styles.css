@@ -269,9 +269,10 @@ body {
   }
 
   #tree-container {
-    min-height: 55vh;
-    max-height: 65vh;
-    overflow: auto;
+    min-height: 380px;
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     overscroll-behavior: contain;
   }
 
@@ -309,19 +310,20 @@ body {
 #tree-container {
   width: 100%;
   height: 100%;
-  overflow: auto;
-  cursor: grab;
+  min-height: 380px;
+  max-height: calc(100vh - 220px);
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: auto;
+  overscroll-behavior: contain;
 }
 
-#tree-container:active { cursor: grabbing; }
+#tree-container:active { cursor: default; }
 
 #tree-svg {
   display: block;
-  min-width: 100%;
-  min-height: 100%;
-  touch-action: none;
+  width: 100%;
+  touch-action: pan-y;
 }
 
 .node {
@@ -345,6 +347,38 @@ body {
 
 .node.has-children circle.dot {
   stroke-width: 2.5px;
+}
+
+.node-focus circle.dot {
+  fill: var(--gold);
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+.node-more circle.dot {
+  fill: transparent;
+  stroke: var(--gold-light);
+  stroke-dasharray: 4 3;
+}
+
+.node-more .node-label {
+  fill: var(--gold-light);
+  font-size: 13px !important;
+}
+
+.node-child .node-label {
+  text-anchor: start;
+}
+
+text.section-label {
+  font-family: var(--font-urdu);
+  fill: var(--muted);
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.node-label-only {
+  pointer-events: none;
 }
 
 .node:hover circle.dot,
