@@ -87,6 +87,56 @@ body {
   font-size: 0.82rem;
 }
 
+/* ——— Visual guide (icons for easy use) ——— */
+.visual-guide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.65rem 1rem;
+  background: rgba(26, 77, 58, 0.35);
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.65rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-urdu);
+  font-size: 0.88rem;
+  color: var(--cream);
+}
+
+.guide-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.guide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid var(--gold);
+}
+
+.guide-dot.sample-green {
+  background: var(--green);
+}
+
+.guide-dot.sample-gold {
+  background: #e8a030;
+  border-color: #fff;
+}
+
+.guide-text {
+  white-space: nowrap;
+}
+
 .header-link {
   color: var(--gold-light);
   text-decoration: underline;
@@ -186,17 +236,32 @@ body {
 }
 
 .toolbar-buttons button {
-  padding: 0.55rem 1rem;
-  min-height: 44px;
-  min-width: 44px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.45rem 0.75rem;
+  min-height: 52px;
+  min-width: 52px;
   border: 1px solid var(--green-light);
   border-radius: var(--radius);
   background: var(--green);
   color: var(--cream);
   cursor: pointer;
   font-family: var(--font-urdu);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   touch-action: manipulation;
+}
+
+.btn-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.btn-label {
+  font-size: 0.78rem;
+  line-height: 1.2;
 }
 
 .toolbar-buttons button:hover { background: var(--green-light); }
@@ -246,7 +311,17 @@ body {
 
   .toolbar-buttons button {
     flex: 1;
-    font-size: 0.88rem;
+    min-width: 56px;
+    min-height: 56px;
+  }
+
+  .guide-item {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .guide-icon {
+    font-size: 1.05rem;
   }
 
   .stats {
@@ -381,6 +456,14 @@ text.section-label {
   pointer-events: none;
 }
 
+text.kids-badge {
+  fill: var(--gold-light);
+  font-family: var(--font-en);
+  font-size: 15px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
 .node:hover circle.dot,
 .node:active circle.dot {
   fill: var(--green-light);
@@ -417,6 +500,41 @@ text.section-label {
   font-family: var(--font-urdu);
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detail-placeholder .placeholder-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.detail-placeholder p {
+  font-size: 1.05rem;
+  color: var(--cream);
+}
+
+.detail-panel .meta-icon {
+  margin-left: 0.25rem;
+}
+
+.detail-panel dt {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.detail-panel .chain-icon {
+  font-size: 1.1rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.back-to-tree .btn-icon-inline {
+  margin-left: 0.35rem;
 }
 
 .detail-panel h2 {

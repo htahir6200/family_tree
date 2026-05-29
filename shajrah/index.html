@@ -21,20 +21,49 @@
         <p id="title-en">Malikan Awan Family Tree</p>
         <p class="header-intro">خاندانی شجرہ کو ڈیجیٹل بنانے کی ایک چھوٹی سی کوشش — اگر کوئی نام غائب ہو یا تصحیح درکار ہو تو براہِ کرم <a class="header-link" href="#feedback">رائے دیں</a>۔ <a class="header-link" href="#credits">تعارف</a></p>
       </div>
-      <p class="header-tagline">نام پر کلک = اولاد دیکھیں · ↑ = مزید آباء</p>
+      <p class="header-tagline">نیچے تصویر دیکھیں — آسان طریقہ</p>
     </div>
   </header>
 
+  <div class="visual-guide" aria-label="استعمال کا آسان طریقہ">
+    <div class="guide-item">
+      <span class="guide-icon" aria-hidden="true">👆</span>
+      <span class="guide-dot sample-green" aria-hidden="true"></span>
+      <span class="guide-text">نام دبائیں</span>
+    </div>
+    <div class="guide-item">
+      <span class="guide-icon" aria-hidden="true">👨‍👦</span>
+      <span class="guide-text">اولاد دیکھیں</span>
+    </div>
+    <div class="guide-item">
+      <span class="guide-dot sample-gold" aria-hidden="true"></span>
+      <span class="guide-text">منتخب نام</span>
+    </div>
+    <div class="guide-item">
+      <span class="guide-icon" aria-hidden="true">⬆️</span>
+      <span class="guide-text">مزید آباء</span>
+    </div>
+  </div>
+
   <div class="toolbar">
     <div class="search-wrap">
-      <span class="search-icon" aria-hidden="true">⌕</span>
-      <input type="search" id="search" placeholder="نام تلاش… (اردو / انگریزی)" autocomplete="off" />
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="search" placeholder="نام تلاش…" autocomplete="off" aria-label="نام تلاش" />
       <div id="search-results" class="search-results hidden"></div>
     </div>
     <div class="toolbar-buttons">
-      <button type="button" id="go-root">جڑ</button>
-      <button type="button" id="more-ancestors">↑ آباء</button>
-      <button type="button" id="reset-view">مرکز</button>
+      <button type="button" id="go-root" title="جڑ — شروع">
+        <span class="btn-icon" aria-hidden="true">🏠</span>
+        <span class="btn-label">جڑ</span>
+      </button>
+      <button type="button" id="more-ancestors" title="مزید آباء">
+        <span class="btn-icon" aria-hidden="true">⬆️</span>
+        <span class="btn-label">آباء</span>
+      </button>
+      <button type="button" id="reset-view" title="مرکز">
+        <span class="btn-icon" aria-hidden="true">🎯</span>
+        <span class="btn-label">مرکز</span>
+      </button>
     </div>
     <div class="stats" id="stats"></div>
   </div>
@@ -46,7 +75,10 @@
       </div>
     </section>
     <aside class="detail-panel" id="detail-panel">
-      <p class="detail-placeholder">← درخت میں کسی نام پر کلک کریں</p>
+      <div class="detail-placeholder">
+        <span class="placeholder-icon" aria-hidden="true">👆</span>
+        <p>درخت میں نام دبائیں</p>
+      </div>
     </aside>
   </main>
 

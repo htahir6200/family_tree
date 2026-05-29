@@ -470,6 +470,14 @@
       .append("title")
       .text("مزید آباء دکھائیں");
 
+    nodeEnter
+      .filter((d) => d.hasKids && d.kind !== "label" && d.kind !== "more-up")
+      .append("text")
+      .attr("class", "kids-badge")
+      .attr("text-anchor", "middle")
+      .attr("pointer-events", "none")
+      .text("＋");
+
     const nodeUpdate = nodeEnter.merge(nodeSel);
     nodeUpdate.attr("transform", (d) => `translate(${d.x},${d.y})`);
     nodeUpdate
@@ -482,6 +490,11 @@
         if (d.kind === "more-up" || d.kind === "label") return d.label;
         return personName(d.data, d.kind !== "child");
       });
+
+    nodeUpdate
+      .select("text.kids-badge")
+      .attr("x", (d) => (d.kind === "child" ? -(NODE_R + 8) : 0))
+      .attr("y", (d) => (d.kind === "child" ? 1 : NODE_R + 14));
 
     nodeUpdate
       .classed("selected", (d) => d.id === selectedId)
@@ -536,19 +549,19 @@
     }
 
     detailPanel.innerHTML = `
-      ${MOBILE ? '<button type="button" class="back-to-tree" id="back-to-tree">↑ درخت پر واپس</button>' : ""}
+      ${MOBILE ? '<button type="button" class="back-to-tree" id="back-to-tree"><span class="btn-icon-inline" aria-hidden="true">⬆️</span> درخت</button>' : ""}
       <h2>${esc(data.name_urdu || data.id)}</h2>
       <p class="en-name">${esc(data.name_en || "")}</p>
       ${
         parent || data.note
           ? `<dl>
-        ${parent ? `<dt>والد</dt><dd>${esc(parent.name_urdu || parent.name_en || parent.id)}</dd>` : ""}
-        ${data.note ? `<dt>نوٹ</dt><dd>${esc(data.note)}</dd>` : ""}
+        ${parent ? `<dt><span class="meta-icon" aria-hidden="true">👤</span> والد</dt><dd>${esc(parent.name_urdu || parent.name_en || parent.id)}</dd>` : ""}
+        ${data.note ? `<dt><span class="meta-icon" aria-hidden="true">📝</span> نوٹ</dt><dd>${esc(data.note)}</dd>` : ""}
       </dl>`
           : ""
       }
       <div class="ancestors">
-        <h3>سلسلہ</h3>
+        <h3><span class="chain-icon" aria-hidden="true">🔗</span> سلسلہ</h3>
         <p class="ancestor-chain">${chain.map(esc).join(" ← ")}</p>
       </div>
     `;
@@ -677,7 +690,7 @@
         bindControls();
       })
       .catch((err) => {
-        detailPanel.innerHTML = `<p class="detail-placeholder">Error: ${esc(err.message)}</p>`;
+        detailPanel.innerHTML = `<div class="detail-placeholder"><span class="placeholder-icon">⚠️</span><p>Error: ${esc(err.message)}</p></div>`;
       });
   }
 
