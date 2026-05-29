@@ -13,6 +13,7 @@
   let searchIndex = [];
   let idToNode = new Map();
   let selectedId = null;
+  let searchHighlightId = null;
 
   const container = document.getElementById("tree-container");
   const svgEl = document.getElementById("tree-svg");
@@ -126,6 +127,27 @@
     return best;
   }
 
+  function parentLabel(person, lang) {
+    if (!person.parentRef) return "";
+    const p = idToNode.get(person.parentRef);
+    if (!p) return "";
+    if (lang === "en") return p.name_en || p.name_urdu || p.id.replace(/_/g, " ");
+    return p.name_urdu || p.name_en || p.id.replace(/_/g, " ");
+  }
+
+  function formatSearchResult(person) {
+    const name = person.name_urdu || person.name_en || person.id.replace(/_/g, " ");
+    const nameEn = person.name_en || person.id.replace(/_/g, " ");
+    const parent = parentLabel(person, "urdu");
+    const parentEn = parentLabel(person, "en");
+
+    const primary = parent ? `${parent} ← ${name}` : name;
+    let enLine = nameEn;
+    if (parentEn) enLine = `${parentEn} ← ${nameEn}`;
+
+    return { primary, enLine };
+  }
+
   function buildSearchIndex() {
     searchIndex = allNodes.map((n) => ({
       person: n,
@@ -223,8 +245,15 @@
 
   function selectNode(d, options = {}) {
     selectedId = d.data.id;
+    if (options.fromSearch) {
+      searchHighlightId = selectedId;
+    } else if (!options.keepHighlight) {
+      searchHighlightId = null;
+    }
     showDetail(d.data, options);
-    g.selectAll("g.node").classed("selected", (n) => n.data.id === selectedId);
+    g.selectAll("g.node")
+      .classed("selected", (n) => n.data.id === selectedId)
+      .classed("highlight", (n) => n.data.id === searchHighlightId);
   }
 
   function onNodeActivate(ev, d) {
@@ -281,6 +310,7 @@
       .attr("y", -(NODE_R + 6))
       .text((d) => labelText(d.data));
     nodeUpdate.classed("selected", (d) => d.data.id === selectedId);
+    nodeUpdate.classed("highlight", (d) => d.data.id === searchHighlightId);
 
     node.exit().transition().duration(DURATION).remove();
 
@@ -362,26 +392,32 @@
   function focusOnNode(d) {
     if (!d || !svg || !zoom) return;
 
-    scrollToTreePanel(false);
+    if (treePanel) {
+      treePanel.scrollIntoView({ behavior: "auto", block: "nearest" });
+    }
 
     const panelW = container.clientWidth;
     const panelH = container.clientHeight;
-    const scale = MOBILE ? 1.2 : 1.35;
-    const offsetX = MOBILE ? 48 : 80;
-    const offsetY = 56;
+    const k = MOBILE ? 1.15 : 1.25;
+    const tx = panelW / 2 - k * d.y;
+    const ty = panelH / 2 - k * d.x;
+    const transform = d3.zoomIdentity.translate(tx, ty).scale(k);
 
-    const tx = panelW / 2 - d.y * scale - offsetX * scale;
-    const ty = panelH / 2 - d.x * scale - offsetY * scale;
+    const centerScroll = () => {
+      const nodeX = k * d.y + tx;
+      const nodeY = k * d.x + ty;
+      container.scrollLeft = Math.max(0, nodeX - panelW / 2);
+      container.scrollTop = Math.max(0, nodeY - panelH / 2);
+    };
 
     svg
+      .interrupt()
       .transition()
-      .duration(600)
-      .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale))
+      .duration(500)
+      .call(zoom.transform, transform)
       .on("end", () => {
-        const nodeScreenX = d.y * scale + offsetX * scale;
-        const nodeScreenY = d.x * scale + offsetY * scale;
-        container.scrollLeft = Math.max(0, nodeScreenX - panelW / 2);
-        container.scrollTop = Math.max(0, nodeScreenY - panelH / 2);
+        centerScroll();
+        requestAnimationFrame(centerScroll);
       });
   }
 
@@ -409,17 +445,15 @@
       (d.children || d._children || []).forEach(openTo);
     }
     openTo(rootHierarchy);
-    update(rootHierarchy);
 
     const found = rootHierarchy.descendants().find((d) => d.data.id === targetId);
-    if (found) {
-      selectNode(found, { fromSearch: true });
-      g.selectAll("g.node").classed("highlight", (n) => n.data.id === targetId);
-      setTimeout(() => {
-        focusOnNode(found);
-        g.selectAll("g.node").classed("highlight", false);
-      }, DURATION + 50);
-    }
+    if (!found) return;
+
+    selectedId = targetId;
+    update(rootHierarchy);
+    selectNode(found, { fromSearch: true });
+
+    setTimeout(() => focusOnNode(found), DURATION + 80);
   }
 
   function resetView() {
@@ -458,10 +492,9 @@
         searchResults.innerHTML = `<button type="button" disabled>کوئی نتیجہ نہیں — املا یا جزو نام آزمائیں</button>`;
       } else {
         searchResults.innerHTML = matches
-          .map(({ person: n, score }) => {
-            const primary = n.name_urdu || n.name_en || n.id;
-            const secondary = n.name_urdu && n.name_en ? n.name_en : n.id.replace(/_/g, " ");
-            return `<button type="button" data-id="${esc(n.id)}">${esc(primary)}<span class="en">${esc(secondary)}</span></button>`;
+          .map(({ person: n }) => {
+            const { primary, enLine } = formatSearchResult(n);
+            return `<button type="button" data-id="${esc(n.id)}">${esc(primary)}<span class="en">${esc(enLine)}</span></button>`;
           })
           .join("");
       }
@@ -471,9 +504,10 @@
     searchResults.addEventListener("click", (ev) => {
       const btn = ev.target.closest("button[data-id]");
       if (!btn) return;
+      const person = idToNode.get(btn.dataset.id);
       revealPath(btn.dataset.id);
       searchResults.classList.add("hidden");
-      searchInput.value = btn.textContent.trim().split("\n")[0] || "";
+      searchInput.value = person ? person.name_urdu || person.name_en || person.id : "";
     });
 
     document.addEventListener("click", (ev) => {

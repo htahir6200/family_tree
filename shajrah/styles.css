@@ -156,13 +156,18 @@ body {
   display: block;
   width: 100%;
   text-align: right;
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 1rem;
   border: none;
   background: transparent;
   color: var(--text);
   cursor: pointer;
   font-family: var(--font-urdu);
   border-bottom: 1px solid rgba(255,255,255,0.06);
+  line-height: 1.55;
+}
+
+.search-results .search-parent {
+  color: var(--gold-light);
 }
 
 .search-results button:hover { background: rgba(201, 162, 39, 0.12); }
@@ -347,12 +352,6 @@ body {
   fill: var(--green-light);
 }
 
-.node.selected circle.dot {
-  fill: var(--gold);
-  stroke: var(--gold-light);
-  stroke-width: 3px;
-}
-
 .node text.node-label {
   font-family: var(--font-urdu);
   font-size: 12px;
@@ -411,10 +410,17 @@ body {
   background: rgba(201, 162, 39, 0.15);
 }
 
+.node.selected circle.dot,
 .node.highlight circle.dot {
   fill: #e8a030;
   stroke: #fff;
   stroke-width: 3px;
+}
+
+.node.selected text.node-label,
+.node.highlight text.node-label {
+  fill: #ffe9a0;
+  stroke: rgba(10, 22, 40, 0.95);
 }
 
 .detail-panel .en-name {
