@@ -5,7 +5,8 @@
   const NODE_R = MOBILE ? 12 : 10;
   const LABEL_SIZE = MOBILE ? 13 : 12;
   const ROW_H = MOBILE ? 76 : 92;
-  const CHILD_ROW_H = MOBILE ? 52 : 58;
+  const CHILD_ROW_H = MOBILE ? 58 : 66;
+  const CHILD_X = MOBILE ? 40 : 48;
   const ANCESTOR_DEFAULT = 2;
   const DURATION = 280;
 
@@ -253,35 +254,56 @@
       y: focusY,
       hasKids: children.length > 0,
     });
-    y += ROW_H + 12;
 
-    const childX = MOBILE ? 28 : 36;
-    children.forEach((person) => {
-      nodes.push({
-        id: person.id,
-        kind: "child",
-        data: person,
-        x: childX,
-        y,
-        hasKids: childCount(person) > 0,
-      });
-      links.push({
-        id: `${focus.id}->${person.id}`,
-        sx: 0,
-        sy: focusY + NODE_R,
-        tx: childX,
-        ty: y,
-      });
-      y += CHILD_ROW_H;
-    });
-
+    const childPositions = [];
     if (children.length) {
+      y += ROW_H * 0.45;
+      children.forEach((person) => {
+        childPositions.push({ person, y });
+        nodes.push({
+          id: person.id,
+          kind: "child",
+          data: person,
+          x: CHILD_X,
+          y,
+          hasKids: childCount(person) > 0,
+        });
+        y += CHILD_ROW_H;
+      });
+
+      const trunkTop = focusY + NODE_R + 2;
+      const trunkBottom = childPositions[childPositions.length - 1].y;
+      links.push({
+        id: `${focus.id}__trunk`,
+        d: `M 0 ${trunkTop} L 0 ${trunkBottom}`,
+      });
+
+      childPositions.forEach(({ person, y: cy }) => {
+        links.push({
+          id: `${focus.id}->${person.id}`,
+          d: `M 0 ${cy} L ${CHILD_X - NODE_R - 4} ${cy}`,
+        });
+      });
+
       nodes.push({
         id: "__children_label__",
         kind: "label",
-        x: childX,
-        y: focusY + ROW_H * 0.55,
+        x: 10,
+        y: focusY + (childPositions[0].y - focusY) * 0.45,
         label: `اولاد (${children.length})`,
+      });
+    } else {
+      y += ROW_H;
+    }
+
+    // Spine connectors between ancestors and focus
+    const spineNodes = nodes.filter((n) => n.kind === "ancestor" || n.kind === "focus");
+    for (let i = 0; i < spineNodes.length - 1; i++) {
+      const a = spineNodes[i];
+      const b = spineNodes[i + 1];
+      links.unshift({
+        id: `spine-${a.id}-${b.id}`,
+        d: `M 0 ${a.y + NODE_R + 2} L 0 ${b.y - NODE_R - 2}`,
       });
     }
 
@@ -299,8 +321,21 @@
   }
 
   function linkPath(l) {
-    const midY = (l.sy + l.ty) / 2;
-    return `M ${l.sx} ${l.sy} C ${l.sx} ${midY}, ${l.tx} ${midY}, ${l.tx} ${l.ty}`;
+    return l.d || "";
+  }
+
+  function childLabelX() {
+    return NODE_R + 12;
+  }
+
+  function nodeLabelAttrs(d) {
+    if (d.kind === "child") {
+      return { x: childLabelX(), y: 0, anchor: "start", baseline: "middle" };
+    }
+    if (d.kind === "label") {
+      return { x: 0, y: 0, anchor: "start", baseline: "auto" };
+    }
+    return { x: 0, y: -(NODE_R + 8), anchor: "middle", baseline: "auto" };
   }
 
   function renderView() {
@@ -348,9 +383,10 @@
     nodeEnter
       .append("text")
       .attr("class", (d) => (d.kind === "label" ? "section-label" : "node-label"))
-      .attr("x", (d) => (d.kind === "child" ? 14 : 0))
-      .attr("y", (d) => (d.kind === "label" ? 0 : -(NODE_R + 8)))
-      .attr("text-anchor", (d) => (d.kind === "child" ? "start" : "middle"))
+      .attr("x", (d) => nodeLabelAttrs(d).x)
+      .attr("y", (d) => nodeLabelAttrs(d).y)
+      .attr("text-anchor", (d) => nodeLabelAttrs(d).anchor)
+      .attr("dominant-baseline", (d) => nodeLabelAttrs(d).baseline)
       .style("font-size", (d) => (d.kind === "label" ? "11px" : LABEL_SIZE + "px"))
       .text((d) => {
         if (d.kind === "more-up") return d.label;
@@ -366,9 +402,13 @@
     const nodeUpdate = nodeEnter.merge(nodeSel);
     nodeUpdate.attr("transform", (d) => `translate(${d.x},${d.y})`);
     nodeUpdate
-      .select("text.node-label")
+      .select("text.node-label, text.section-label")
+      .attr("x", (d) => nodeLabelAttrs(d).x)
+      .attr("y", (d) => nodeLabelAttrs(d).y)
+      .attr("text-anchor", (d) => nodeLabelAttrs(d).anchor)
+      .attr("dominant-baseline", (d) => nodeLabelAttrs(d).baseline)
       .text((d) => {
-        if (d.kind === "more-up") return d.label;
+        if (d.kind === "more-up" || d.kind === "label") return d.label;
         return labelText(d.data);
       });
 

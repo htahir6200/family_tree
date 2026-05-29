@@ -365,6 +365,7 @@ body {
 
 .node-child .node-label {
   text-anchor: start;
+  dominant-baseline: middle;
 }
 
 text.section-label {
@@ -399,6 +400,7 @@ text.section-label {
   fill: none;
   stroke: var(--line);
   stroke-width: 1.5px;
+  pointer-events: none;
 }
 
 .detail-panel {
