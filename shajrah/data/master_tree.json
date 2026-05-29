@@ -3,8 +3,8 @@
   "title_en": "Qutub Haider Shah Lineage",
   "source_images": 26,
   "stats": {
-    "total_entries": 409,
-    "unique_persons": 408,
+    "total_entries": 425,
+    "unique_persons": 424,
     "max_depth": 29
   },
   "tree": {
@@ -1404,7 +1404,7 @@
                                                                                                               },
                                                                                                               {
                                                                                                                 "id": "muhammad_naseer_dr",
-                                                                                                                "name_urdu": "محمد نصیر (ڈاکٹر)",
+                                                                                                                "name_urdu": "محمد نصیر",
                                                                                                                 "name_en": "Muhammad Naseer",
                                                                                                                 "children": [
                                                                                                                   {
@@ -1470,7 +1470,7 @@
                                                                                                       },
                                                                                                       {
                                                                                                         "id": "kamal_khan_k",
-                                                                                                        "name_urdu": "کمال خان",
+                                                                                                        "name_urdu": "کالا خان",
                                                                                                         "name_en": "Kamal Khan",
                                                                                                         "children": [
                                                                                                           {
@@ -1548,7 +1548,7 @@
                                                                                                           },
                                                                                                           {
                                                                                                             "id": "muhammad_rashid_sy",
-                                                                                                            "name_urdu": "محمد راشد",
+                                                                                                            "name_urdu": "محمد رشید",
                                                                                                             "name_en": "Muhammad Rashid",
                                                                                                             "children": [
                                                                                                               {
@@ -1604,7 +1604,25 @@
                                                                                                           {
                                                                                                             "id": "ilyas_muhammad",
                                                                                                             "name_urdu": "الیاس محمد",
-                                                                                                            "name_en": "Ilyas Muhammad"
+                                                                                                            "name_en": "Ilyas Muhammad",
+                                                                                                            "children": [
+                                                                                                              {
+                                                                                                                "id": "__ilyas_muhamm",
+                                                                                                                "name_urdu": "پرویز اختر"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__ilyas_mu_1",
+                                                                                                                "name_urdu": "محمد جاوید"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child_ilyas_muhamm",
+                                                                                                                "name_urdu": "اورنگزیب"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__ilyas_mu_2",
+                                                                                                                "name_urdu": "شکیل احمد"
+                                                                                                              }
+                                                                                                            ]
                                                                                                           },
                                                                                                           {
                                                                                                             "id": "lal_muhammad",
@@ -1645,26 +1663,6 @@
                                                                                                             "name_urdu": "تاج محمد",
                                                                                                             "name_en": "Taj Muhammad",
                                                                                                             "note": "مرحوم"
-                                                                                                          },
-                                                                                                          {
-                                                                                                            "id": "parvez_akhtar",
-                                                                                                            "name_urdu": "پرویز اختر",
-                                                                                                            "name_en": "Parvez Akhtar"
-                                                                                                          },
-                                                                                                          {
-                                                                                                            "id": "muhammad_javed_dm",
-                                                                                                            "name_urdu": "محمد جاوید",
-                                                                                                            "name_en": "Muhammad Javed"
-                                                                                                          },
-                                                                                                          {
-                                                                                                            "id": "aurangzeb_dm",
-                                                                                                            "name_urdu": "اورنگزیب",
-                                                                                                            "name_en": "Aurangzeb"
-                                                                                                          },
-                                                                                                          {
-                                                                                                            "id": "shakeel_ahmed_dm",
-                                                                                                            "name_urdu": "شکیل احمد",
-                                                                                                            "name_en": "Shakeel Ahmed"
                                                                                                           }
                                                                                                         ]
                                                                                                       }
@@ -1943,26 +1941,9 @@
                                                                                                             "name_en": "Aurangzeb",
                                                                                                             "children": [
                                                                                                               {
-                                                                                                                "id": "mehr_parvez",
-                                                                                                                "name_urdu": "مہر پرویز",
-                                                                                                                "name_en": "Mehr Parvez"
-                                                                                                              },
-                                                                                                              {
                                                                                                                 "id": "muhammad_saeed_gz",
                                                                                                                 "name_urdu": "محمد سعید",
-                                                                                                                "name_en": "Muhammad Saeed",
-                                                                                                                "children": [
-                                                                                                                  {
-                                                                                                                    "id": "tahir_gz",
-                                                                                                                    "name_urdu": "طاہر",
-                                                                                                                    "name_en": "Tahir"
-                                                                                                                  },
-                                                                                                                  {
-                                                                                                                    "id": "bilal_hassan",
-                                                                                                                    "name_urdu": "بلال حسن",
-                                                                                                                    "name_en": "Bilal Hassan"
-                                                                                                                  }
-                                                                                                                ]
+                                                                                                                "name_en": "Muhammad Saeed"
                                                                                                               },
                                                                                                               {
                                                                                                                 "id": "abdul_waheed",
@@ -1973,25 +1954,21 @@
                                                                                                           },
                                                                                                           {
                                                                                                             "id": "mehr_saleem",
-                                                                                                            "name_urdu": "مہر سلیم",
+                                                                                                            "name_urdu": "محمد سلیم",
                                                                                                             "name_en": "Mehr Saleem",
                                                                                                             "children": [
                                                                                                               {
                                                                                                                 "id": "mehr_irshad_gz",
-                                                                                                                "name_urdu": "مہر ارشاد",
-                                                                                                                "name_en": "Mehr Irshad",
-                                                                                                                "children": [
-                                                                                                                  {
-                                                                                                                    "id": "saqib_hussain",
-                                                                                                                    "name_urdu": "ثاقب حسین",
-                                                                                                                    "name_en": "Saqib Hussain"
-                                                                                                                  },
-                                                                                                                  {
-                                                                                                                    "id": "danish_mahmood",
-                                                                                                                    "name_urdu": "دانش محمود",
-                                                                                                                    "name_en": "Danish Mahmood"
-                                                                                                                  }
-                                                                                                                ]
+                                                                                                                "name_urdu": "ثاقب حسین",
+                                                                                                                "name_en": "Mehr Irshad"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__mehr_saleem",
+                                                                                                                "name_urdu": "دانش محمود"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child_mehr_saleem",
+                                                                                                                "name_urdu": "توصیف"
                                                                                                               }
                                                                                                             ]
                                                                                                           },
@@ -1999,6 +1976,42 @@
                                                                                                             "id": "gulfraz",
                                                                                                             "name_urdu": "گلفراز",
                                                                                                             "name_en": "Gulfraz"
+                                                                                                          },
+                                                                                                          {
+                                                                                                            "id": "__fazal_rehman",
+                                                                                                            "name_urdu": "پرویز اختر",
+                                                                                                            "children": [
+                                                                                                              {
+                                                                                                                "id": "____fazal_rehm",
+                                                                                                                "name_urdu": "طاہر عباس"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "____fazal__1",
+                                                                                                                "name_urdu": "حسن علی"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "____fazal__2",
+                                                                                                                "name_urdu": "حسین علی"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child___fazal_rehm",
+                                                                                                                "name_urdu": "محمدبلال"
+                                                                                                              }
+                                                                                                            ]
+                                                                                                          },
+                                                                                                          {
+                                                                                                            "id": "__fazal_re_1",
+                                                                                                            "name_urdu": "محمد ارشاد",
+                                                                                                            "children": [
+                                                                                                              {
+                                                                                                                "id": "child___fazal_re_1",
+                                                                                                                "name_urdu": "منیب"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child___fazal__1",
+                                                                                                                "name_urdu": "عبداللہ"
+                                                                                                              }
+                                                                                                            ]
                                                                                                           }
                                                                                                         ]
                                                                                                       },
@@ -2010,12 +2023,61 @@
                                                                                                       },
                                                                                                       {
                                                                                                         "id": "khilqat_rehman",
-                                                                                                        "name_urdu": "خلقت الرحمن",
-                                                                                                        "name_en": "Khilqat-ur-Rehman"
+                                                                                                        "name_en": "Khilqat-ur-Rehman",
+                                                                                                        "name_urdu": "محمدیوسف",
+                                                                                                        "children": [
+                                                                                                          {
+                                                                                                            "id": "__khilqat_rehm",
+                                                                                                            "name_urdu": "محمد جاوید"
+                                                                                                          },
+                                                                                                          {
+                                                                                                            "id": "__khilqat__1",
+                                                                                                            "name_urdu": "چن زیب",
+                                                                                                            "children": [
+                                                                                                              {
+                                                                                                                "id": "child___khilqat__1",
+                                                                                                                "name_urdu": "نازک"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child___khilqa_1",
+                                                                                                                "name_urdu": "حماد"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child___khilqa_2",
+                                                                                                                "name_urdu": "دانیال"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child___khilqa_3",
+                                                                                                                "name_urdu": "ذوالنورین"
+                                                                                                              }
+                                                                                                            ]
+                                                                                                          },
+                                                                                                          {
+                                                                                                            "id": "child_khilqat_rehm",
+                                                                                                            "name_urdu": "خانویز",
+                                                                                                            "children": [
+                                                                                                              {
+                                                                                                                "id": "child_child_khilqa",
+                                                                                                                "name_urdu": "معز"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child_child_kh_1",
+                                                                                                                "name_urdu": "عثمان"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child_child_kh_2",
+                                                                                                                "name_urdu": "عمر"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__child_khilqa",
+                                                                                                                "name_urdu": "عبد الہادی"
+                                                                                                              }
+                                                                                                            ]
+                                                                                                          }
+                                                                                                        ]
                                                                                                       },
                                                                                                       {
                                                                                                         "id": "mehr_yusuf_gz",
-                                                                                                        "name_urdu": "مہر یوسف",
                                                                                                         "name_en": "Mehr Yusuf",
                                                                                                         "children": [
                                                                                                           {
@@ -2024,44 +2086,14 @@
                                                                                                             "name_en": "Abdul Rehman",
                                                                                                             "children": [
                                                                                                               {
-                                                                                                                "id": "abdul_salam_gz",
-                                                                                                                "name_urdu": "عبدالسلام",
-                                                                                                                "name_en": "Abdul Salam"
-                                                                                                              },
-                                                                                                              {
                                                                                                                 "id": "mehr_farman",
-                                                                                                                "name_urdu": "مہر فرمان",
+                                                                                                                "name_urdu": "محمد  فرمان",
                                                                                                                 "name_en": "Mehr Farman"
                                                                                                               },
                                                                                                               {
                                                                                                                 "id": "muhammad_rizwan_gz",
                                                                                                                 "name_urdu": "محمد رضوان",
                                                                                                                 "name_en": "Muhammad Rizwan"
-                                                                                                              },
-                                                                                                              {
-                                                                                                                "id": "adnan_gz",
-                                                                                                                "name_urdu": "عدنان",
-                                                                                                                "name_en": "Adnan"
-                                                                                                              },
-                                                                                                              {
-                                                                                                                "id": "luqman",
-                                                                                                                "name_urdu": "لقمان",
-                                                                                                                "name_en": "Luqman"
-                                                                                                              },
-                                                                                                              {
-                                                                                                                "id": "mehr_arsalan",
-                                                                                                                "name_urdu": "مہر ارسلان",
-                                                                                                                "name_en": "Mehr Arsalan"
-                                                                                                              },
-                                                                                                              {
-                                                                                                                "id": "mujtaba_gz",
-                                                                                                                "name_urdu": "مجتبیٰ",
-                                                                                                                "name_en": "Mujtaba"
-                                                                                                              },
-                                                                                                              {
-                                                                                                                "id": "muhammad_irfan_gz2",
-                                                                                                                "name_urdu": "محمد عرفان",
-                                                                                                                "name_en": "Muhammad Irfan"
                                                                                                               }
                                                                                                             ]
                                                                                                           },
@@ -2071,34 +2103,55 @@
                                                                                                             "name_en": "Shaukat Mahmood",
                                                                                                             "children": [
                                                                                                               {
-                                                                                                                "id": "saifullah",
-                                                                                                                "name_urdu": "سیف اللہ",
-                                                                                                                "name_en": "Saifullah"
+                                                                                                                "id": "__shaukat_mehm",
+                                                                                                                "name_urdu": "محمد ارسلان"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "child_shaukat_mehm",
+                                                                                                                "name_urdu": "مجتبیٰ"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__shaukat__1",
+                                                                                                                "name_urdu": "محمد عرفان"
                                                                                                               }
                                                                                                             ]
                                                                                                           },
                                                                                                           {
-                                                                                                            "id": "hafeez_rehman",
-                                                                                                            "name_urdu": "حفیظ الرحمن",
-                                                                                                            "name_en": "Hafeez-ur-Rehman",
+                                                                                                            "id": "child_mehr_yusuf_g",
+                                                                                                            "name_urdu": "عبدالسلام",
                                                                                                             "children": [
                                                                                                               {
-                                                                                                                "id": "muneeb",
-                                                                                                                "name_urdu": "منیب",
-                                                                                                                "name_en": "Muneeb"
+                                                                                                                "id": "child_child_mehr_y",
+                                                                                                                "name_urdu": "عدنان"
                                                                                                               },
                                                                                                               {
-                                                                                                                "id": "abdullah_gz",
-                                                                                                                "name_urdu": "عبداللہ",
-                                                                                                                "name_en": "Abdullah"
+                                                                                                                "id": "child_child_me_1",
+                                                                                                                "name_urdu": "نعمان"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                "id": "__child_mehr_y",
+                                                                                                                "name_urdu": "سیف اللہ"
                                                                                                               }
                                                                                                             ]
+                                                                                                          },
+                                                                                                          {
+                                                                                                            "id": "__mehr_yusuf_g",
+                                                                                                            "name_urdu": "حفیظ الرحمن"
                                                                                                           }
-                                                                                                        ]
+                                                                                                        ],
+                                                                                                        "name_urdu": "خلقت الرحمن"
                                                                                                       }
                                                                                                     ]
                                                                                                   }
                                                                                                 ]
+                                                                                              },
+                                                                                              {
+                                                                                                "id": "__bakhtawar",
+                                                                                                "name_urdu": "معلوم نہیں"
+                                                                                              },
+                                                                                              {
+                                                                                                "id": "child_bakhtawar",
+                                                                                                "name_urdu": "مٹھا"
                                                                                               }
                                                                                             ]
                                                                                           }

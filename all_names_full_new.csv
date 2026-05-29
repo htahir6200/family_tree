@@ -238,7 +238,7 @@ faiz_alam_k,فیض عالم,Faiz Alam,,,noor_alam,25,,False
 pir_muhammad,پیر محمد,Pir Muhammad,,,faiz_alam_k,26,,False
 muhammad_nazir,محمد نذیر,Muhammad Nazir,,,pir_muhammad,27,,False
 hamza_mahmood,حمزہ محمود,Hamza Mahmood,,,muhammad_nazir,28,,False
-muhammad_naseer_dr,محمد نصیر (ڈاکٹر),Muhammad Naseer,,,pir_muhammad,27,,False
+muhammad_naseer_dr,محمد نصیر,Muhammad Naseer,,,pir_muhammad,27,,False
 abdullah_pn,عبداللہ,Abdullah,,,muhammad_naseer_dr,28,,False
 abu_bakr,ابوبکر,Abu Bakr,,,muhammad_naseer_dr,28,,False
 bashir_ahmed_k,بشیر احمد,Bashir Ahmed,5049,,faiz_alam_k,26,,False
@@ -249,7 +249,7 @@ muhammad_ammar,محمد عمار,Muhammad Ammar,,,muhammad_hanif,28,,False
 muhammad_hassan,محمد حسان,Muhammad Hassan,,,muhammad_hanif,28,,False
 tanveer_ahmed_k,تنویر احمد,Tanveer Ahmed,,,wazir_muhammad,27,,False
 farrukh,فرخ,Farrukh,,,wazir_muhammad,27,,False
-kamal_khan_k,کمال خان,Kamal Khan,,,noor_alam,25,,False
+kamal_khan_k,کالا خان,Kamal Khan,,,noor_alam,25,,False
 abdul_karim,عبدالکریم بن کالا خان,Abdul Karim,5051,,kamal_khan_k,26,,False
 sajid_mehmood,ساجد محمود,Sajid Mahmood,,,abdul_karim,27,,False
 naeem_akhtar,نعیم اختر,Naeem Akhtar,,,abdul_karim,27,,False
@@ -263,7 +263,7 @@ tariq_fahim,طارق فہیم,Tariq Fahim,,,khalid_azim,28,,False
 syed_alam_k,سید عالم بن نور عالم,Syed Alam,5052,,noor_alam,25,,False
 muhammad_riaz_sy,محمد ریاض,Muhammad Riaz,,,syed_alam_k,26,,False
 muhammad_siddique_sy,محمد صدیق,Muhammad Siddique,,,syed_alam_k,26,,False
-muhammad_rashid_sy,محمد راشد,Muhammad Rashid,,,syed_alam_k,26,,False
+muhammad_rashid_sy,محمد رشید,Muhammad Rashid,,,syed_alam_k,26,,False
 muhammad_rafiq_sy,محمد رفیق,Muhammad Rafiq,,,muhammad_rashid_sy,27,,False
 aziz_rehman_sy,عزیز الرحمن,Aziz-ur-Rehman,,,syed_alam_k,26,,False
 muhammad_farid_sy,محمد فرید,Muhammad Farid,,,syed_alam_k,26,,False
@@ -273,6 +273,10 @@ khawaja_muhammad,خواجہ محمد,Khawaja Muhammad,,,dost_muhammad,26,,False
 mushtaq_ahmed,مشتاق احمد,Mushtaq Ahmed,,,khawaja_muhammad,27,,False
 muhammad_ishaq_dm,محمد اسحاق,Muhammad Ishaq,,,khawaja_muhammad,27,,False
 ilyas_muhammad,الیاس محمد,Ilyas Muhammad,,,dost_muhammad,26,,False
+__ilyas_muhamm,پرویز اختر,,,,ilyas_muhammad,27,,False
+__ilyas_mu_1,محمد جاوید,,,,ilyas_muhammad,27,,False
+child_ilyas_muhamm,اورنگزیب,,,,ilyas_muhammad,27,,False
+__ilyas_mu_2,شکیل احمد,,,,ilyas_muhammad,27,,False
 lal_muhammad,لال محمد,Lal Muhammad,,,dost_muhammad,26,,False
 muhammad_manzoor_dm,محمد منظور,Muhammad Manzoor,,,lal_muhammad,27,,False
 muhammad_zahoor,محمد ظہور,Muhammad Zahoor,,,lal_muhammad,27,,False
@@ -280,10 +284,6 @@ muhammad_ghafoor,محمد غفور,Muhammad Ghafoor,,,lal_muhammad,27,,False
 rashid_muhammad_dm,رشید محمد,Rashid Muhammad,,,dost_muhammad,26,,False
 zahir_ahmed_dm,ظہیر احمد,Zahir Ahmed,,,rashid_muhammad_dm,27,,False
 taj_muhammad,تاج محمد,Taj Muhammad,,,dost_muhammad,26,مرحوم,False
-parvez_akhtar,پرویز اختر,Parvez Akhtar,,,dost_muhammad,26,,False
-muhammad_javed_dm,محمد جاوید,Muhammad Javed,,,dost_muhammad,26,,False
-aurangzeb_dm,اورنگزیب,Aurangzeb,,,dost_muhammad,26,,False
-shakeel_ahmed_dm,شکیل احمد,Shakeel Ahmed,,,dost_muhammad,26,,False
 hayat_muhammad,حیات محمد,Hayat Muhammad,5055,,kalu,24,,False
 muhammad_mansab,محمد منصف,Muhammad Mansab,,,hayat_muhammad,25,,False
 sarfaraz_hm,سرفراز,Sarfraz,,,muhammad_mansab,26,,False
@@ -329,33 +329,49 @@ gul_zaman_kalu,گل زمان بن کالو,Gul Zaman bin Kalu,5054,ملکان م
 muhammad_irfan_gz,محمد عرفان,Muhammad Irfan,,,gul_zaman_kalu,25,,True
 fazal_rehman_gz,فضل الرحمن,Fazal-ur-Rehman,,,gul_zaman_kalu,25,,False
 aurangzeb_gz,اورنگ زیب,Aurangzeb,,,fazal_rehman_gz,26,,False
-mehr_parvez,مہر پرویز,Mehr Parvez,,,aurangzeb_gz,27,,False
 muhammad_saeed_gz,محمد سعید,Muhammad Saeed,,,aurangzeb_gz,27,,False
-tahir_gz,طاہر,Tahir,,,muhammad_saeed_gz,28,,False
-bilal_hassan,بلال حسن,Bilal Hassan,,,muhammad_saeed_gz,28,,False
 abdul_waheed,عبدالوحید,Abdul Waheed,,,aurangzeb_gz,27,,False
-mehr_saleem,مہر سلیم,Mehr Saleem,,,fazal_rehman_gz,26,,False
-mehr_irshad_gz,مہر ارشاد,Mehr Irshad,,,mehr_saleem,27,,False
-saqib_hussain,ثاقب حسین,Saqib Hussain,,,mehr_irshad_gz,28,,False
-danish_mahmood,دانش محمود,Danish Mahmood,,,mehr_irshad_gz,28,,False
+mehr_saleem,محمد سلیم,Mehr Saleem,,,fazal_rehman_gz,26,,False
+mehr_irshad_gz,ثاقب حسین,Mehr Irshad,,,mehr_saleem,27,,False
+__mehr_saleem,دانش محمود,,,,mehr_saleem,27,,False
+child_mehr_saleem,توصیف,,,,mehr_saleem,27,,False
 gulfraz,گلفراز,Gulfraz,,,fazal_rehman_gz,26,,False
+__fazal_rehman,پرویز اختر,,,,fazal_rehman_gz,26,,False
+____fazal_rehm,طاہر عباس,,,,__fazal_rehman,27,,False
+____fazal__1,حسن علی,,,,__fazal_rehman,27,,False
+____fazal__2,حسین علی,,,,__fazal_rehman,27,,False
+child___fazal_rehm,محمدبلال,,,,__fazal_rehman,27,,False
+__fazal_re_1,محمد ارشاد,,,,fazal_rehman_gz,26,,False
+child___fazal_re_1,منیب,,,,__fazal_re_1,27,,False
+child___fazal__1,عبداللہ,,,,__fazal_re_1,27,,False
 gohar_rehman_gz,گوہر رحمن,Gohar Rehman,,,gul_zaman_kalu,25,,True
-khilqat_rehman,خلقت الرحمن,Khilqat-ur-Rehman,,,gul_zaman_kalu,25,,False
-mehr_yusuf_gz,مہر یوسف,Mehr Yusuf,,,gul_zaman_kalu,25,,False
+khilqat_rehman,محمدیوسف,Khilqat-ur-Rehman,,,gul_zaman_kalu,25,,False
+__khilqat_rehm,محمد جاوید,,,,khilqat_rehman,26,,False
+__khilqat__1,چن زیب,,,,khilqat_rehman,26,,False
+child___khilqat__1,نازک,,,,__khilqat__1,27,,False
+child___khilqa_1,حماد,,,,__khilqat__1,27,,False
+child___khilqa_2,دانیال,,,,__khilqat__1,27,,False
+child___khilqa_3,ذوالنورین,,,,__khilqat__1,27,,False
+child_khilqat_rehm,خانویز,,,,khilqat_rehman,26,,False
+child_child_khilqa,معز,,,,child_khilqat_rehm,27,,False
+child_child_kh_1,عثمان,,,,child_khilqat_rehm,27,,False
+child_child_kh_2,عمر,,,,child_khilqat_rehm,27,,False
+__child_khilqa,عبد الہادی,,,,child_khilqat_rehm,27,,False
+mehr_yusuf_gz,خلقت الرحمن,Mehr Yusuf,,,gul_zaman_kalu,25,,False
 abdul_rehman_gz,عبدالرحمن,Abdul Rehman,,,mehr_yusuf_gz,26,,False
-abdul_salam_gz,عبدالسلام,Abdul Salam,,,abdul_rehman_gz,27,,False
-mehr_farman,مہر فرمان,Mehr Farman,,,abdul_rehman_gz,27,,False
+mehr_farman,محمد  فرمان,Mehr Farman,,,abdul_rehman_gz,27,,False
 muhammad_rizwan_gz,محمد رضوان,Muhammad Rizwan,,,abdul_rehman_gz,27,,False
-adnan_gz,عدنان,Adnan,,,abdul_rehman_gz,27,,False
-luqman,لقمان,Luqman,,,abdul_rehman_gz,27,,False
-mehr_arsalan,مہر ارسلان,Mehr Arsalan,,,abdul_rehman_gz,27,,False
-mujtaba_gz,مجتبیٰ,Mujtaba,,,abdul_rehman_gz,27,,False
-muhammad_irfan_gz2,محمد عرفان,Muhammad Irfan,,,abdul_rehman_gz,27,,False
 shaukat_mehmood,شوکت محمود,Shaukat Mahmood,,,mehr_yusuf_gz,26,,False
-saifullah,سیف اللہ,Saifullah,,,shaukat_mehmood,27,,False
-hafeez_rehman,حفیظ الرحمن,Hafeez-ur-Rehman,,,mehr_yusuf_gz,26,,False
-muneeb,منیب,Muneeb,,,hafeez_rehman,27,,False
-abdullah_gz,عبداللہ,Abdullah,,,hafeez_rehman,27,,False
+__shaukat_mehm,محمد ارسلان,,,,shaukat_mehmood,27,,False
+child_shaukat_mehm,مجتبیٰ,,,,shaukat_mehmood,27,,False
+__shaukat__1,محمد عرفان,,,,shaukat_mehmood,27,,False
+child_mehr_yusuf_g,عبدالسلام,,,,mehr_yusuf_gz,26,,False
+child_child_mehr_y,عدنان,,,,child_mehr_yusuf_g,27,,False
+child_child_me_1,نعمان,,,,child_mehr_yusuf_g,27,,False
+__child_mehr_y,سیف اللہ,,,,child_mehr_yusuf_g,27,,False
+__mehr_yusuf_g,حفیظ الرحمن,,,,mehr_yusuf_gz,26,,False
+__bakhtawar,معلوم نہیں,,,,bakhtawar,23,,False
+child_bakhtawar,مٹھا,,,,bakhtawar,23,,False
 barkhurdar,برخوردار (عرف پرخورہ),Barkhurdar,5059,,kala,17,,False
 bund_khan,بند خان,Bund Khan,,,barkhurdar,18,,False
 ali_muhammad,علی محمد,Ali Muhammad,,,bund_khan,19,,False
