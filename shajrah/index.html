@@ -19,7 +19,7 @@
         <p class="eyebrow">DIGITAL شجرہ نسب</p>
         <h1 id="title-urdu">ملکان اعوان</h1>
         <p id="title-en">Malikan Awan Family Tree</p>
-        <p class="header-intro">خاندانی شجرہ کو ڈیجیٹل بنانے کی ایک چھوٹی سی کوشش — اگر کوئی نام غائب ہو یا تصحیح درکار ہو تو براہِ کرم <a class="header-link" href="#feedback">رائے دیں</a>۔ <a class="header-link" href="#credits">تعارف</a></p>
+        <p class="header-intro">خاندانی شجرہ کو ڈیجیٹل بنانے کی ایک چھوٹی سی کوشش — اگر کوئی نام غائب ہو یا تصحیح درکار ہو تو براہِ کرم <a class="header-link" href="#feedback">رائے دیں</a>۔ <a class="header-link" href="#credits">تعارف</a> · <a class="header-link" href="#privacy">رازداری</a></p>
       </div>
     </div>
   </header>
@@ -146,6 +146,53 @@
     </div>
   </section>
 
+  <section class="privacy-section" id="privacy">
+    <div class="privacy-inner">
+      <h2>رازداری اور کوکیز</h2>
+      <p class="privacy-subtitle">Privacy &amp; Cookies</p>
+
+      <div class="privacy-block">
+        <h3>ہم کیا جمع کرتے ہیں؟</h3>
+        <p>
+          اگر آپ کوکیز قبول کریں تو Google Analytics 4 (GA4) گمنام اعداد و شمار جمع کرتا ہے —
+          جیسے ملک/شہر (تقریباً)، موبائل یا کمپیوٹر، براؤزر، کون سی صفحات دیکھی گئیں،
+          اور سائٹ پر تقریباً کتنی دیر رہے۔ یہ آپ کا نام، فون، یا ای میل نہیں جمع کرتا
+          جب تک آپ خود رائے فارم نہ بھریں۔
+        </p>
+        <p class="privacy-en">
+          If you accept cookies, Google Analytics 4 (GA4) collects anonymous statistics —
+          such as approximate location, device type, browser, pages viewed, and time on site.
+          It does not collect your name or contact details unless you submit the feedback form.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>کوکیز</h3>
+        <p>
+          GA4 کوکیز استعمال کرتا ہے۔ EU/UK قوانین کے مطابق ہم پہلے آپ کی اجازت لیتے ہیں۔
+          <strong>مسترد</strong> پر کوئی تجزیاتی کوکی نہیں لگتی۔ آپ کسی بھی وقت
+          <a class="header-link" href="#" id="cookie-settings">کوکی ترتیبات</a> سے دوبارہ انتخاب کر سکتے ہیں۔
+        </p>
+        <p class="privacy-en">
+          GA4 uses cookies. We ask for consent first (Accept / Reject). Reject disables analytics cookies.
+          You can change your choice anytime via Cookie settings in the footer.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>رابطہ</h3>
+        <p>
+          رازداری کے سوالات: <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>
+          (Dr Muhammad Tahir Abbas)
+        </p>
+        <p class="privacy-en">
+          Privacy questions: <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>.
+          Google’s privacy policy: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">policies.google.com/privacy</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-title" id="footer-title">شجرہ نسب — ملکان اعوان</p>
@@ -163,10 +210,32 @@
         <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>
         <span class="footer-sep" aria-hidden="true">·</span>
         <a href="#credits">تعارف</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#privacy">رازداری</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#" id="cookie-settings-footer">کوکیز</a>
       </p>
     </div>
   </footer>
 
+  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner-inner">
+      <p id="cookie-banner-title" class="cookie-banner-text">
+        <strong>کوکیز</strong> — سائٹ بہتر بنانے کے لیے Google Analytics سے گمنام اعداد و شمار (ملک، آلہ، صفحات)۔
+        <a class="header-link" href="#privacy">مزید پڑھیں</a>
+      </p>
+      <p class="cookie-banner-en">
+        We use Google Analytics cookies for anonymous visit statistics (location, device, pages) to improve the site.
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-accept">قبول / Accept</button>
+        <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-reject">مسترد / Reject</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="site-config.js"></script>
+  <script src="analytics.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="app.js"></script>
   <script src="feedback.js"></script>

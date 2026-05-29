@@ -756,6 +756,152 @@ text.section-label {
   opacity: 0.85;
 }
 
+/* ——— Privacy ——— */
+.privacy-section {
+  border-top: 1px solid var(--line);
+  background: rgba(8, 18, 32, 0.88);
+  padding: 2rem 1.25rem;
+}
+
+.privacy-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.privacy-section h2 {
+  font-family: var(--font-urdu);
+  color: var(--gold-light);
+  font-size: 1.35rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.privacy-subtitle {
+  font-family: var(--font-en);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}
+
+.privacy-block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  margin-bottom: 0.85rem;
+}
+
+.privacy-block h3 {
+  font-family: var(--font-urdu);
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-block p {
+  font-family: var(--font-urdu);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin-bottom: 0.45rem;
+}
+
+.privacy-block p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-en {
+  font-family: var(--font-en) !important;
+  font-size: 0.8rem !important;
+  color: var(--muted) !important;
+  direction: ltr;
+  text-align: left;
+  line-height: 1.55 !important;
+}
+
+.privacy-en a {
+  color: var(--gold-light);
+}
+
+/* ——— Cookie banner ——— */
+.cookie-banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0.85rem 1rem;
+  padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+  background: rgba(6, 14, 26, 0.97);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
+
+.cookie-banner-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cookie-banner-text {
+  font-family: var(--font-urdu);
+  color: var(--cream);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 0.35rem;
+}
+
+.cookie-banner-en {
+  font-family: var(--font-en);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cookie-btn {
+  flex: 1;
+  min-width: 120px;
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-urdu);
+  font-size: 0.9rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cookie-btn-accept {
+  background: var(--green);
+  border: 1px solid var(--green-light);
+  color: var(--cream);
+}
+
+.cookie-btn-accept:hover {
+  background: var(--green-light);
+}
+
+.cookie-btn-reject {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.cookie-btn-reject:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* ——— Feedback ——— */
 .feedback-section {
   border-top: 1px solid var(--line);
