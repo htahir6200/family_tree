@@ -1,0 +1,459 @@
+﻿id,name_urdu,name_en,ref,clan,parent_count,note,la_walad
+asif_islam,آصف اسلام,Asif Islam,,,1,,False
+abu_bakr,ابوبکر,Abu Bakr,,,1,,False
+ehtisham,احتشام,Ehtisham,,,1,,False
+ihsan,احسان,Ihsan,,,1,,False
+ahsan_ma,احسن,Ahsan,,,1,,False
+ahsan_ag,احسن,Ahsan,,,1,,False
+ahsan_raza,احسن رضا,Ahsan Raza,,,1,,False
+ahmad_ali_h,احمد علی,Ahmad Ali,,,1,,False
+ahmed_ali_ma,احمد علی,Ahmed Ali,,,1,,False
+ahmad_ali_jd,احمد علی,Ahmad Ali,,,1,,False
+ahmad_gul,احمد گل بن محمد علی,Ahmad Gul bin Muhammad Ali,5058,ملتان جلال,1,,False
+ishaq_bk,اسحاق,Ishaq,,,1,کھلہ بٹ گاؤں,False
+ijaz_ahmed,اعجاز احمد,Ijaz Ahmed,,,1,,False
+azam_din,اعظم دین بن نادر,Azam Din bin Nadir,5044,کلاگان جبل,1,گورگی سے اونچی بیلہ,False
+afzal,افضال,Afzal,,,1,,False
+ilyas_muhammad,الیاس محمد,Ilyas Muhammad,,,1,,False
+anas_ali,انس علی,Anas Ali,,,1,,False
+anwar_zaman_kk,انور زمان,Anwar Zaman,,,1,,False
+anwar_zaman_kz,انور زمان,Anwar Zaman,,,1,,False
+aurangzeb_ke,اورنگ زیب,Aurangzeb,,,1,,False
+aurangzeb_gz,اورنگ زیب,Aurangzeb,,,1,,False
+aurangzeb_dm,اورنگزیب,Aurangzeb,,,1,,False
+akbar,اکبر,Akbar,,,1,,False
+badal_heerul,بادل حیرل,Badal Heerul,,,1,گوشہ حیرل,False
+bakhtar_h,بختار یا بہادر,Bakhtar ya Bahadur,5050,,1,5039 سے — مکمل شاخ صفحہ 5050,False
+bakhtawar,بختاور شاہ بہادر بن محمد علی,Bakhtawar Shah Bahadur,5050,ملتان میر,1,,False
+barkhurdar,برخوردار (عرف پر خورہ),Barkhurdar,5059,ملکاں جبرل,1,,False
+bashir_ahmed_k,بشیر احمد,Bashir Ahmed,5049,,1,,False
+bashir_ahmad_jd,بشیر احمد بن فیض عالم,Bashir Ahmad,5049,,1,,False
+bashir_muhammad_fm,بشیر محمد,Bashir Muhammad,,,1,,False
+bilal_hassan,بلال حسن,Bilal Hassan,,,1,,False
+bin_a,بن,Bin,,,1,,False
+banaras,بنارس,Banaras,,,1,,False
+bund_khan,بند خان,Bund Khan,,,1,,False
+bunyad_gul,بنیاد گل,Bunyaad Gul,,,1,,False
+bostan_khan,بوشان خان,Boshan Khan,5044,,1,,False
+bhildar,بھلدار,Bhildar,,,1,,False
+bahadur,بہادر,Bahadur,,,1,,False
+taj_muhammad_fa,تاج محمد,Taj Muhammad,,,1,,False
+taj_muhammad,تاج محمد,Taj Muhammad,,,1,مرحوم,False
+tanveer_sm,تنویر,Tanveer,,,1,,False
+tanveer_ahmed_fm,تنویر احمد,Tanveer Ahmed,,,1,,False
+tanveer_ahmed_k,تنویر احمد,Tanveer Ahmed,,,1,,False
+tauseef_ma,توصیف,Tauseef,,,1,,False
+tauqeer_ag,توقیر,Tauqeer,,,1,,False
+teel,تیل,Teel,,,1,,False
+saqib_rehman,ثاقب الرحمن,Saqib-ur-Rehman,,,1,,False
+saqib_hussain,ثاقب حسین,Saqib Hussain,,,1,,False
+jaim,جائم,Jaim,5039,,1,,False
+javed_az,جاوید,Javeed,,,1,,False
+javed_jd,جاوید,Javed,,,1,,False
+jamal_h,جمال,Jamal,,,1,,False
+jamaluddin,جمال الدین بن محمد علی,Jamaluddin,5049,سلطان جلال,1,,False
+junaid,جنید,Junaid,,,1,,False
+joli,جولی,Joli,,,1,,False
+jahangir,جہانگیر,Jahangir,,,1,,False
+haji_ahmad,حاجی احمد,Haji Ahmad,,,1,,False
+hafiz_nazir,حافظ نذیر احمد,Hafiz Nazir Ahmed,,,1,,False
+habal,حبال,Habal,,,1,,False
+habib_ahmed_ba,حبیب احمد,Habib Ahmad,,,1,,False
+habib_rehman_nz,حبیب الرحمن,Habib-ur-Rehman,,,1,,False
+habib_rehman_az,حبیب الرحمن,Habib-ur-Rehman,,,1,,False
+habib_rehman_kz,حبیب الرحمن,Habib-ur-Rehman,,,1,گوجری سے ہری پور,False
+habib_rehman_ms,حبیب الرحمن,Habib-ur-Rehman,,,1,,False
+hassan_raza,حسن رضا,Hassan Raza,,,1,,False
+husain_ahmed,حسین احمد,Husain Ahmad,,,1,,False
+hafiz_aj,حفیظ,Hafiz,,,1,,False
+hafeez_rehman,حفیظ الرحمن,Hafeez-ur-Rehman,,,1,,False
+hammad,حماد ذوالنورین,Hammad,,,1,,False
+hammad_gul,حماد گل,Hammad Gul,,,1,,False
+hamza_mahmood,حمزہ محمود,Hamza Mahmood,,,1,,False
+hamza_gul,حمزہ گل,Hamza Gul,,,1,,False
+hamid,حمید,Hamid,,,1,,False
+hanif,حنیف,Hanif,,,1,,False
+hayat_muhammad,حیات محمد,Hayat Muhammad,5055,,1,,False
+haider_zaman_az,حیدر زمان,Haider Zaman,,,1,,False
+haider_zaman,حیدر زمان,Haider Zaman,,,1,,False
+heerul,حیرل,Heerul,,,1,,False
+khadim_ahmad,خادم احمد,Khadim Ahmad,,,1,,False
+khalid_5038,خالد,Khalid,,,1,,False
+khalid_azim,خالد عظیم,Khalid Azim,,,1,,False
+khaliq_ad,خالق,Khaliq,,,1,,False
+khaluiz,خالو یز,Khaluiz,,,1,,False
+khan_afsar,خان افسر,Khan Afsar,,,1,,False
+khan_muhammad_sk,خان محمد,Khan Muhammad,,,1,,False
+khani_zaman_ad,خانی زمان,Khani Zaman,,,1,,False
+khani_zaman_jd,خانی زمان,Khani Zaman,,,1,,False
+khani_zaman,خانی زمان بن کالو,Khani Zaman bin Kalu,5057,گلگاں میر,1,,False
+khuda_bakhsh,خدا بخش,Khuda Bakhsh,,,1,,False
+khazana_muhammad,خزانہ محمد,Khazana Muhammad,,,1,,False
+khilqat_rehman,خلقت الرحمن,Khilqat-ur-Rehman,,,1,,False
+khalil_rehman,خلیل الرحمن,Khalil-ur-Rehman,,,1,,False
+khawaja_muhammad_fa,خواجہ محمد,Khawaja Muhammad,,,1,,False
+khawaja_muhammad,خواجہ محمد,Khawaja Muhammad,,,1,,False
+khushhal,خوشحال (عرف کشال),Khushhal,,,1,,False
+khushi_muhammad,خوشی محمد,Khushi Muhammad,5048,,1,,False
+khyber_zaman,خیبر زمان,Khyber Zaman,5047,,1,,False
+khaibar_zaman_bk,خیبر زمان بن محمد خان,Khaibar Zaman,,,1,,False
+khair_awan,خیر اعوان,Khair Awan,5037,ملتان,1,,False
+danish_mahmood,دانش محمود,Danish Mahmood,,,1,,False
+daniyal_mg,دانیال,Daniyal,,,1,,False
+daniyal_hm,دانیال,Daniyal,,,1,,False
+dildar,دلدار,Dildar,,,1,,False
+dost_muhammad,دوست محمد بن نور عالم,Dost Muhammad,5053,ملتان جلال,1,,False
+raees_ahmed,رئیس احمد,Raees Ahmed,,,1,,False
+rashid_az,راشد,Rashid,,,1,,False
+rashid_muhammad_dm,رشید محمد,Rashid Muhammad,,,1,,False
+rashid_muhammad_ag,رشید محمد,Rashid Muhammad,,,1,,False
+raza_muhammad_fm,رضا محمد,Raza Muhammad,,,1,,False
+rizwan_sm,رضوان,Rizwan,,,1,,False
+ramzan_jd,رمضان,Ramzan,,,1,,False
+riaz_bk,ریاض,Riaz,,,1,کھلہ بٹ گاؤں,False
+rehan,ریحان,Rehan,,,1,,False
+zubair_az,زبیر,Zubair,,,1,,False
+zumurd,زمرد,Zumurd,,,1,,False
+sajid_muhammad_w,ساجد محمد,Sajid Muhammad,,,1,,False
+sajid_mehmood,ساجد محمود,Sajid Mahmood,,,1,,False
+sajid_mehmood_az,ساجد محمود,Sajid Mahmood,,,1,,False
+sattar_muhammad,ستار محمد,Sattar Muhammad,,,1,,False
+sajjad_ahmed,سجاد احمد,Sajjad Ahmed,,,1,,False
+sajjad_ahmed_km,سجاد احمد,Sajjad Ahmed,,,1,,False
+sardar_muhammad,سردار محمد,Sardar Muhammad,,,1,,False
+sarfaraz_gz,سرفراز,Sarfaraz,,,1,,False
+sarfaraz_hm,سرفراز,Sarfraz,,,1,,False
+saad_fahim,سعد فہیم,Saad Fahim,,,1,,False
+saeed_aj,سعید,Saeed,,,1,,False
+salamat_ali,سلامت علی,Salamat Ali,,,1,,False
+sultan_muhammad_ma,سلطان محمد بن میر عالم,Sultan Muhammad bin Mir Alam,5042,,1,,False
+samundar_khan,سمندر خان,Samundar Khan,,,1,,False
+samiullah,سمیع اللہ,Samiullah,,,1,,False
+syed_alam_sa,سید عالم,Syed Alam,5042,,1,,False
+syed_alam_k,سید عالم بن نور عالم,Syed Alam,5052,,1,,False
+seer,سیر,Seer,,,1,,False
+sair_alam,سیر عالم,Sair Alam,5043,,1,,False
+saifullah,سیف اللہ,Saifullah,,,1,,False
+shahid_gz,شاہد,Shahid,,,1,,False
+shahid_iqbal,شاہد اقبال,Shahid Iqbal,,,1,,False
+shahwali,شاہولی,Shahwali,,,1,,False
+shamail,شمائل,Shamail,,,1,,False
+shaukat_zaman,شوکت زمان,Shaukat Zaman,,,1,,False
+shaukat_mehmood,شوکت محمود,Shaukat Mahmood,,,1,,False
+shakeel_ahmed_kz,شکیل احمد,Shakeel Ahmed,,,1,,False
+shakeel_ahmed_dm,شکیل احمد,Shakeel Ahmed,,,1,,False
+shakeel_ahmed_az,شکیل احمد,Shakeel Ahmed,,,1,,False
+sher_khan,شیر خان,Sher Khan,5045,,1,,False
+sher_zaman_mg,شیر زمان,Sher Zaman,,,1,,False
+sher_muhammad_ag,شیر محمد,Sher Muhammad,,,1,,False
+sabir_zaman,صابر زمان,Sabir Zaman,,,1,,False
+sado,صدو,Sado,,,1,,False
+safdar_khan_ph,صفدر خان (پٹواری),Safdar Khan Patwari,,,1,,False
+safdar_zaman_sk,صفدر زمان,Safdar Zaman,,,1,,False
+safdar_zaman,صفدر زمان,Safdar Zaman,,,1,,False
+zia_muhammad,ضیاء محمد,Zia Muhammad,,,1,,False
+tariq_ak,طارق,Tariq,,,1,,False
+tariq_fahim,طارق فہیم,Tariq Fahim,,,1,,False
+tahir_gz,طاہر,Tahir,,,1,,False
+tahir_rehman,طاہر الرحمن,Tahir-ur-Rehman,,,1,,False
+tahir_imtiaz,طاہر امتیاز,Tahir Imtiaz,,,1,,False
+talha,طلحہ,Talha,,,1,,False
+tota,طوطا,Tota,,,1,,False
+zafar_iqbal,ظفر اقبال,Zafar Iqbal,,,1,,False
+zahir_muhammad,ظہور محمد,Zahoor Muhammad,,,1,,False
+zahir_ahmed_dm,ظہیر احمد,Zahir Ahmed,,,1,,False
+abid_d,عابد,Abid,,,1,,False
+abid_mk,عابد,Abid,,,1,,False
+adil_mk,عادل,Adil,,,1,,False
+arif_mg,عارف,Arif,,,1,,False
+arif_waseem,عارف وسیم,Arif Waseem,,,1,,False
+atif_bashir,عاطف بشیر,Atif Bashir,,,1,,False
+aqib_islam,عاقب اسلام,Aqib Islam,,,1,,False
+abdul_jabbar_mg,عبد الجبار,Abdul Jabbar,,,1,گورکی سے اولی,False
+abdul_raheem,عبد الرحیم,Abdul Rahim,,,1,,False
+abdul_bari,عبدالباری,Abdul Bari,,,1,,False
+abdul_jabbar_ms,عبدالجبار,Abdul Jabbar,,,1,,False
+abdul_rafi,عبدالرافع,Abdul Rafi,,,1,,False
+abdul_rab,عبدالرب,Abdul Rab,,,1,,False
+abdul_rehman_kz,عبدالرحمن,Abdul Rehman,5047,,2,,False
+abdul_rehman_ma,عبدالرحمن,Abdur Rahman,,,1,,False
+abdul_rehman_jd,عبدالرحمن,Abdur Rehman,,,1,,False
+abdul_rehman_gz,عبدالرحمن,Abdul Rehman,,,1,,False
+abdul_rehman_kz2,عبدالرحمن بن محمد خان,Abdul Rehman,,,1,,False
+abdul_razzaq_mz,عبدالرزاق,Abdul Razzaq,,,1,,False
+abdul_razzaq_ma,عبدالرزاق,Abdul Razzaq,,,1,,False
+abdul_rashid_fm,عبدالرشید,Abdul Rashid,,,1,,False
+abdul_salam_gz,عبدالسلام,Abdul Salam,,,1,,False
+abdullah_mg,عبداللہ,Abdullah,,,1,,False
+abdullah_mf,عبداللہ,Abdullah,,,1,,False
+abdullah_pn,عبداللہ,Abdullah,,,1,,False
+abdullah_gz,عبداللہ,Abdullah,,,1,,False
+abdul_malik,عبدالمالک,Abdul Malik,,,1,,False
+abdul_waheed,عبدالوحید,Abdul Waheed,,,1,,False
+abdul_wahab,عبدالوہاب,Abdul Wahab,,,1,,False
+abdul_karim_mg,عبدالکریم,Abdul Karim,,,1,,False
+abdul_karim,عبدالکریم بن کالا خان,Abdul Karim,5051,,1,,False
+ubaid_fr,عبید,Ubaid,,,1,,False
+ubaid_salam,عبید السلام,Ubaid-ul-Salam,,,1,گوجری,False
+usman,عثمان,Usman,,,1,,False
+adnan_f,عدنان,Adnan,,,1,,False
+adnan_gz,عدنان,Adnan,,,1,,False
+adeel_mk,عدیل,Adeel,,,1,,False
+aziz_rehman_sa,عزیز الرحمن,Aziz-ur-Rehman,,,1,,False
+aziz_rehman_ad,عزیز الرحمن,Aziz-ur-Rehman,5047,,1,,False
+aziz_rehman_sy,عزیز الرحمن,Aziz-ur-Rehman,,,1,,False
+ali_zaman_sk,علی زمان,Ali Zaman,,,1,,False
+ali_zaman,علی زمان,Ali Zaman,,,1,,False
+ali_imran,علی عمران,Ali Imran,,,1,,False
+ali_farman_sm,علی فرمان,Ali Farman,,,1,,False
+ali_farman_az,علی فرمان,Ali Farman,,,1,,False
+ali_muhammad,علی محمد,Ali Muhammad,,,1,,False
+amman,عمان,Amman,,,1,,False
+umar,عمر,Umar,,,1,,False
+umair,عمیر,Umair,,,1,,False
+ghaffar_muhammad,غفار محمد,Ghaffar Muhammad,,,1,,False
+ghulam_ali,غلام علی,Ghulam Ali,,,1,,True
+fateh_muhammad,فتح محمد,Fateh Muhammad,,,1,,False
+fida_muhammad,فدا محمد,Fida Muhammad,,,1,,False
+farhan,فرحان,Farhan,,,1,,False
+farrukh,فرخ,Farrukh,,,1,,False
+farman_ul_haq,فرمان الحق,Farman-ul-Haq,,,1,,False
+farman_ali,فرمان علی,Farman Ali,,,1,,False
+fazal_rehman_kk,فضل الرحمن,Fazal-ur-Rehman,,,1,,False
+fazal_rehman_gz,فضل الرحمن,Fazal-ur-Rehman,,,1,,False
+faqir_muhammad_sa,فقیر محمد,Faqir Muhammad,,,1,,False
+faqir_muhammad,فقیر محمد,Faqir Muhammad,,,1,گورگی سے سنڈ جبل · ہری پور,False
+fahad_fahim,فہد فہیم,Fahad Fahim,,,1,,False
+fayaz,فیاض,Fayaz,,,1,,False
+firoz_din,فیروز دین,Firoz Din,,,1,,False
+faiz_alam_mg,فیض عالم,Faiz Alam,5060,,1,,False
+faiz_alam_5047,فیض عالم,Faiz Alam,5047,,1,,False
+faiz_alam_k,فیض عالم,Faiz Alam,,,1,,False
+faiz_alam_bmg,فیض عالم بن محمد گل,Faiz Alam bin Muhammad Gul,,,1,,False
+faiz_alam_bin_mir_alam,فیض عالم بن میر عالم,Faiz Alam bin Mir Alam,5042,,1,,False
+qasim_ali,قاسم علی,Qasim Ali,,,1,,True
+qutub_haider,قطب حیدر شاہ (ملک غازی),Qutub Haider Shah,5038,ملکان حیل,1,,False
+lal_muhammad,لال محمد,Lal Muhammad,,,1,,False
+ladha,لدھا,Ladha,,,1,,False
+latif,لطیف,Latif,,,1,,False
+luqman,لقمان,Luqman,,,2,,False
+majid_iq,ماجد,Majid,,,1,,False
+majid,ماجد,Majid,,,1,,False
+mayoli,مایولی,Mayoli,,,1,,False
+mutawalli,متولی,Mutawalli,,,1,,False
+mujtaba_gz,مجتبیٰ,Mujtaba,,,1,,False
+mujtaba_ms,مجتبیٰ,Mujtaba,,,1,,False
+mohsin_gz,محسن,Mohsin,,,1,,False
+mohsin_ag,محسن,Mohsin,,,1,,False
+muhammad_ibrar,محمد ابرار,Muhammad Ibrar,,,1,,False
+muhammad_ibrahim_mg,محمد ابراہیم,Muhammad Ibrahim,,,1,,False
+muhammad_ibrahim_ba,محمد ابراہیم,Muhammad Ibrahim,,,1,,False
+muhammad_akhtar,محمد اختر,Muhammad Akhtar,,,1,,False
+muhammad_idrees,محمد ادریس,Muhammad Idrees,,,1,,False
+muhammad_arshad_fa,محمد ارشد,Muhammad Arshad,,,1,,False
+muhammad_arshad,محمد ارشد,Muhammad Arshad,,,1,,False
+muhammad_ishaq_mg,محمد اسحاق,Muhammad Ishaq,,,1,,False
+muhammad_ishaq_dm,محمد اسحاق,Muhammad Ishaq,,,1,,False
+muhammad_aslam,محمد اسلم,Muhammad Aslam,,,1,,False
+muhammad_ismail_mg,محمد اسماعیل,Muhammad Ismail,,,1,,False
+muhammad_ashraf_fa,محمد اشرف,Muhammad Ashraf,,,1,,True
+muhammad_asghar,محمد اصغر,Muhammad Asghar,,,1,,False
+muhammad_azam,محمد اعظم,Muhammad Azam,,,1,,False
+muhammad_iqbal_mz,محمد اقبال,Muhammad Iqbal,,,1,,False
+muhammad_iqbal_ph,محمد اقبال ولد گل محمد,Muhammad Iqbal son of Gul Muhammad,,,1,,False
+muhammad_ilyas_mg,محمد الیاس,Muhammad Ilyas,,,1,,False
+muhammad_ilyas_fm,محمد الیاس,Muhammad Ilyas,,,1,,False
+muhammad_imtiaz,محمد امتیاز,Muhammad Imtiaz,,,1,,False
+muhammad_amir_ms,محمد امیر,Muhammad Amir,,,1,,False
+muhammad_amin,محمد امین,Muhammad Amin,,,1,,False
+muhammad_anwar_fa,محمد انور,Muhammad Anwar,,,1,,False
+muhammad_akram_fa2,محمد اکرم,Muhammad Akram,,,1,,True
+muhammad_akram_fa,محمد اکرم,Muhammad Akram,,,1,,False
+muhammad_ayub_fa,محمد ایوب,Muhammad Ayub,,,1,,False
+muhammad_ayub,محمد ایوب,Muhammad Ayub,,,1,,False
+muhammad_bashir_mg,محمد بشیر,Muhammad Bashir,,,1,لاڈولہ,False
+bilal_usman,محمد بلال عثمان,Muhammad Bilal Usman,,,1,,False
+muhammad_taj,محمد تاج الدولہ,Muhammad Taj ud-Daula,,,1,,False
+muhammad_javed_dm,محمد جاوید,Muhammad Javed,,,1,,False
+muhammad_javed_lulah,محمد جاوید لولہ,Muhammad Javed Lulah,,,1,ذہنی مریض,False
+muhammad_jamil_mg,محمد جمیل,Muhammad Jamil,,,1,,False
+muhammad_jameel_sk,محمد جمیل,Muhammad Jameel,,,1,,False
+muhammad_jamil_az,محمد جمیل,Muhammad Jamil,,,1,,False
+muhammad_hassan,محمد حسان,Muhammad Hassan,,,1,,False
+muhammad_hussain,محمد حسین,Muhammad Hussain,,,1,,False
+muhammad_hanif,محمد حنیف,Muhammad Hanif,,,1,,False
+muhammad_khan_mg,محمد خان,Muhammad Khan,5060,,1,,False
+muhammad_khan_ad,محمد خان,Muhammad Khan,5045,,1,,False
+muhammad_khayyam,محمد خیام,Muhammad Khayyam,,,1,,False
+muhammad_zeeshan,محمد ذیشان,Muhammad Zeeshan,,,1,,False
+muhammad_rashid_sa,محمد راشد,Muhammad Rashid,,,1,,False
+muhammad_rashid_sy,محمد راشد,Muhammad Rashid,,,1,,False
+muhammad_rizwan_ar,محمد رضوان,Muhammad Rizwan,,,1,,False
+muhammad_rizwan_gz,محمد رضوان,Muhammad Rizwan,,,1,,False
+muhammad_rafiq_mg,محمد رفیق,Muhammad Rafiq,,,1,,False
+muhammad_rafiq_sa,محمد رفیق,Muhammad Rafiq,,,1,,False
+muhammad_rafiq_ba,محمد رفیق,Muhammad Rafiq,,,1,,False
+muhammad_rafiq_sy,محمد رفیق,Muhammad Rafiq,,,1,,False
+muhammad_rafiq_ph,محمد رفیق ولد مہر دین,Muhammad Rafiq son of Mehr Din,,,1,,False
+muhammad_ramzan,محمد رمضان,Muhammad Ramzan,,,1,,False
+muhammad_riaz_mg,محمد ریاض,Muhammad Riaz,,,1,,False
+muhammad_riaz_sa,محمد ریاض,Muhammad Riaz,,,1,,False
+muhammad_riaz_sy,محمد ریاض,Muhammad Riaz,,,1,,False
+muhammad_saeed_sk,محمد سعید,Muhammad Saeed,,,1,,False
+muhammad_saeed_gz,محمد سعید,Muhammad Saeed,,,1,,False
+muhammad_saleem_fa,محمد سلیم,Muhammad Saleem,,,1,,True
+muhammad_saleem_sm,محمد سلیم,Muhammad Saleem,,,1,,False
+muhammad_shabbir,محمد شبیر,Muhammad Shabbir,,,1,,False
+muhammad_shoaib,محمد شعیب,Muhammad Shoaib,,,1,,False
+muhammad_shafiq_sa,محمد شفیق,Muhammad Shafiq,,,1,,False
+muhammad_shafiq_sy,محمد شفیق,Muhammad Shafiq,,,1,,False
+muhammad_shakeel_mg,محمد شکیل,Muhammad Shakeel,,,1,,False
+muhammad_sadiq_sk,محمد صادق,Muhammad Sadiq,,,1,,False
+muhammad_sadiq_lulah,محمد صادق لولہ,Muhammad Sadiq Lulah,,,1,,False
+muhammad_siddiq_mg,محمد صدیق,Muhammad Siddiq,,,1,,False
+muhammad_siddique_sa,محمد صدیق,Muhammad Siddique,,,1,,False
+muhammad_siddique_sy,محمد صدیق,Muhammad Siddique,,,1,,False
+muhammad_siddique_ms,محمد صدیق,Muhammad Siddique,,,1,,False
+muhammad_sagheer,محمد صغیر,Muhammad Sagheer,,,1,,False
+muhammad_zahoor,محمد ظہور,Muhammad Zahoor,,,1,,False
+muhammad_abid,محمد عابد,Muhammad Abid,,,1,,False
+muhammad_arif,محمد عارف,Muhammad Arif,,,1,,False
+muhammad_alam_fa,محمد عالم,Muhammad Alam,,,1,,False
+muhammad_usman_ms,محمد عثمان,Muhammad Usman,,,1,,False
+muhammad_irfan_gz,محمد عرفان,Muhammad Irfan,,,1,,True
+muhammad_irfan_gz2,محمد عرفان,Muhammad Irfan,,,1,,False
+muhammad_aqeel,محمد عقیل,Muhammad Aqeel,,,1,,False
+muhammad_ali_nadir,محمد علی,Muhammad Ali,5048,,1,,False
+muhammad_ali_hatim,محمد علی بن حاتم,Muhammad Ali bin Hatim,5041,ملکان جبل,1,,False
+muhammad_ammar,محمد عمار,Muhammad Ammar,,,1,,False
+muhammad_imran,محمد عمران,Muhammad Imran,,,1,,False
+muhammad_ghafoor,محمد غفور,Muhammad Ghafoor,,,1,,False
+muhammad_farid_sa,محمد فرید,Muhammad Farid,,,1,,False
+muhammad_farid_sy,محمد فرید,Muhammad Farid,,,1,,False
+muhammad_fayyaz,محمد فیاض,Muhammad Fayyaz,,,1,,False
+muhammad_mahboob,محمد محبوب,Muhammad Mahboob,,,1,,False
+muhammad_mahfooz_hr,محمد محفوظ,Muhammad Mahfooz,,,1,,False
+muhammad_mudassir,محمد مدثر,Muhammad Mudassir,,,1,,False
+muhammad_matloob,محمد مطلوب,Muhammad Matloob,,,1,,False
+muhammad_maqsood_fa,محمد مقصود,Muhammad Maqsood,,,1,,False
+muhammad_mansab,محمد منصب,Muhammad Mansab,,,1,,False
+muhammad_manzoor_sk,محمد منظور,Muhammad Manzoor,,,1,,False
+muhammad_manzoor_dm,محمد منظور,Muhammad Manzoor,,,1,,False
+muhammad_nadeem_mg,محمد ندیم,Muhammad Nadeem,,,1,,False
+muhammad_nadeem,محمد ندیم,Muhammad Nadeem,,,1,,False
+muhammad_nazir,محمد نذیر,Muhammad Nazir,,,1,,False
+muhammad_naseer_dr,محمد نصیر (ڈاکٹر),Muhammad Naseer,,,1,,False
+muhammad_waseem,محمد وسیم,Muhammad Waseem,,,1,,False
+muhammad_gul,محمد گل,Muhammad Gul,,,1,,False
+muhammad_yaqub_mg,محمد یعقوب,Muhammad Yaqub,,,1,,False
+muhammad_yusuf_fd,محمد یوسف,Muhammad Yusuf,,,1,,False
+muhammad_yusuf_gz,محمد یوسف بن گل زمان,Muhammad Yusuf bin Gul Zaman,5055,,1,,False
+muhammad_yunus,محمد یونس,Muhammad Yunus,,,1,,False
+mahmood_ahmed,محمود احمد,Mahmood Ahmad,,,1,,False
+mudassir_iqbal,مدثر اقبال,Mudassir Iqbal,,,1,,False
+madad_b,مدد,Madad,,,1,,False
+madad_f,مدد,Madad,,,1,,False
+mirza_5040,مرزا بن احمد علی,Mirza bin Ahmed Ali,5040,ملگان مریل,1,,False
+mureed_muhammad,مرید محمد,Mureed Muhammad,,,1,,False
+mast_rehman,مست رحمان,Mast Rehman,5040,,1,,False
+mastar_khan,مستار خان بن کمال خان,Mastar Khan,5040,ملگان مریل,1,,False
+miskin,مسکین,Miskin,,,1,,False
+mushahir,مشاہیر محمد کسو,Mushahir Muhammad Kaso,5154,,1,,False
+mushtaq_ahmed,مشتاق احمد,Mushtaq Ahmed,,,1,,False
+misri,مصری,Misri,,,1,,False
+maroof,معروف,Maroof,,,1,,False
+muazz,معز,Muazz,,,1,,False
+maqsood_mg,مقصود,Maqsood,,,1,,False
+maqsood_hr,مقصود,Maqsood,,,1,,False
+root,ملکان اعوان — شجرہ نسب,Malikan Awan Family Tree,,,0,,False
+mansab,منصب,Mansab,,,1,,True
+manzoor_ma,منظور,Manzoor,,,1,,False
+manzoor2_ma,منظور,Manzoor,,,1,,False
+manzoor_bashir,منظور بشیر,Manzoor Bashir,,,1,,False
+muneeb,منیب,Muneeb,,,1,,False
+momin,مومن,Momin,,,1,,False
+makhan,مکھن,Makhan,,,1,,False
+mehr_asif,مہر آصف,Mehr Asif,,,1,,False
+mehr_arsalan,مہر ارسلان,Mehr Arsalan,,,1,,False
+mehr_irshad_km,مہر ارشاد,Mehr Irshad,,,1,,False
+mehr_irshad_gz,مہر ارشاد,Mehr Irshad,,,1,,False
+mehr_afzal,مہر افضل,Mehr Afzal,,,1,,False
+mehr_iqbal_ma,مہر اقبال,Mehr Iqbal,,,1,,False
+mehr_din_fa,مہر الدین,Mehr-ud-Din,,,1,,False
+mehr_khalid,مہر خالد,Mehr Khalid,,,1,,False
+mehr_zubair,مہر زبیر,Mehr Zubair,,,1,,False
+mehr_saleem,مہر سلیم,Mehr Saleem,,,1,,False
+mehr_alam_ma,مہر عالم,Mehr Alam,,,1,,False
+mehr_ali_nadir,مہر علی بن نادر,Mehr Ali bin Nadir,5048,,1,,False
+mehr_fazil,مہر فاضل,Mehr Fazil,,,1,,False
+mehr_farman,مہر فرمان,Mehr Farman,,,1,,False
+mehr_masood,مہر مسعود,Mehr Masood,,,1,,False
+mehr_maqbool,مہر مقبول,Mehr Maqbool,,,1,,False
+mehr_parvez,مہر پرویز,Mehr Parvez,,,1,,False
+mehr_yusuf_gz,مہر یوسف,Mehr Yusuf,,,1,,False
+mehran,مہران,Mehran,,,1,,False
+mir_zaman_sk,میر زمان,Mir Zaman,,,1,,False
+mir_zaman_ad,میر زمان,Mir Zaman,,,1,,False
+mir_zaman_kalu,میر زمان بن کالو,Mir Zaman bin Kalu,5056,ملتان جمیل,1,,False
+mir_sultan,میر سلطان,Mir Sultan,5046,,1,,False
+mir_sultan_mk,میر سلطان بن محمد خان,Mir Sultan bin Muhammad Khan,5046,ملتان جلال,1,,False
+mir_salman,میر سلمان,Mir Salman,,,1,,False
+mir_wali,میر ولی,Mir Wali,,,1,,True
+nadir,نادر,Nadir,,,1,,False
+nazun,نازن,Nazun,,,1,,False
+nama,نامہ,Nama,,,1,,False
+nabeel_ahmed_kz,نبیل احمد,Nabeel Ahmed,,,1,,False
+nabeel_ahmed,نبیل احمد,Nabeel Ahmed,,,1,,False
+nisar_ahmed_az,نثار احمد,Nisar Ahmed,,,1,,False
+nisar_ahmed_km,نثار احمد,Nisar Ahmed,,,1,,False
+nadeem_ma,ندیم,Nadeem,,,1,,False
+nazir_ke,نذیر,Nazir,,,1,,False
+nazeer_ahmed_kz,نذیر احمد,Nazeer Ahmed,,,1,,False
+nazir_muhammad_fm,نذیر محمد,Nazir Muhammad,,,1,,False
+naram_ali,نرم علی (ملکان),Naram Ali,5292,,1,,False
+naseer_alam,نصیر عالم,Naseer Alam,,,1,,False
+naeem_akhtar,نعیم اختر,Naeem Akhtar,,,1,,False
+nafees_fa,نفیس,Nafees,,,1,,False
+nafees_iqbal,نفیس اقبال,Nafees Iqbal,,,1,,False
+noor_zaman_kk,نور زمان,Noor Zaman,,,1,شجرہ نویس,False
+noor_zaman_ph,نور زمان ولد کمال خان,Noor Zaman son of Kamal Khan,,,1,,False
+noor_alam,نور عالم,Noor Alam,,,1,,False
+noor_muhammad,نور محمد بن نادر,Noor Muhammad bin Nadir,5043,کلاگان جبل,1,,False
+naveed_az,نوید,Naveed,,,1,,False
+naveed_sm,نوید,Naveed,,,1,,False
+naveed_khalid,نوید (عرف خالد),Naveed alias Khalid,,,1,,False
+naveed_akhtar,نوید اختر,Naveed Akhtar,,,1,,False
+naveed_rehman_fm,نوید الرحمن,Naveed-ur-Rehman,,,1,,False
+wajid,واجد,Wajid,,,1,,False
+wahid_hussain,واحد حسین,Wahid Hussain,,,1,,False
+waris,وارث,Waris,,,1,,False
+wahid,وحید,Wahid,,,1,,False
+wazir_muhammad,وزیر محمد,Wazir Muhammad,,,1,,False
+waseem_ma,وسیم,Waseem,,,1,,False
+waqar_ahmed,وقار احمد,Waqar Ahmed,,,1,,False
+wali_muhammad,ولی محمد,Wali Muhammad,,,1,,False
+parvez_akhtar,پرویز اختر,Parvez Akhtar,,,1,,False
+pir_muhammad,پیر محمد,Pir Muhammad,,,1,,False
+chaman_zeb,چمن زیب,Chaman Zeb,,,1,,False
+kashif_islam,کاشف اسلام,Kashif Islam,,,1,,False
+kashif_raza,کاشف رضا,Kashif Raza,,,1,,False
+kalu,کالو,Kalu,5050,,1,گوجری سے 1928ء اولی,False
+kamran,کامران,Kamran,,,1,,False
+kamil_khan,کامل خان,Kamil Khan,,,1,,True
+kand_khan,کاند خان,Kand Khan,5046,,1,,False
+karam_elahi,کرم الہی,Karam Elahi,,,1,,False
+karam_ali,کرم علی (عرف مکی),Karam Ali,,,1,,False
+kale_khan,کمال خان,Kamal Khan,,,1,,False
+kamal_khan_ad,کمال خان,Kamal Khan,,,1,,False
+kamal_khan_k,کمال خان,Kamal Khan,,,1,,False
+gul_jd,گل,Gul,,,1,,False
+gul_zaman_bk,گل زمان,Gul Zaman,,,1,,False
+gul_zaman_kalu,گل زمان بن کالو,Gul Zaman bin Kalu,5054,ملکان میر,1,,False
+gul_muhammad_ag,گل محمد,Gul Muhammad,,,1,,False
+gulzar,گلزار,Gulzar,,,1,,False
+gulfraz,گلفراز,Gulfraz,,,1,,False
+gohar_rehman_sk,گوہر رحمن,Gohar Rehman,,,1,,False
+gohar_rehman_gz,گوہر رحمن,Gohar Rehman,,,1,,True
+haroon,ہارون,Haroon,,,1,,False
+hashim_nasir,ہاشم بن ناصر,Hashim bin Nasir,5039,ملکان مری,1,,False
+yasir_gz,یاسر,Yasir,,,1,,False

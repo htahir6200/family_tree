@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="شجرہ نسب — ملکان اعوان خاندان کا DIGITAL شجرہ" />
+  <title>شجرہ نسب — ملکان اعوان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="title-block">
+        <p class="eyebrow">DIGITAL شجرہ نسب</p>
+        <h1 id="title-urdu">ملکان اعوان</h1>
+        <p id="title-en">Malikan Awan Family Tree</p>
+      </div>
+      <p class="header-tagline">نام پر کلک = کھولیں + تفصیل · <a class="header-link" href="#feedback">رائے بھیجیں</a></p>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="search" placeholder="نام تلاش کریں…" autocomplete="off" />
+      <div id="search-results" class="search-results hidden"></div>
+    </div>
+    <div class="toolbar-buttons">
+      <button type="button" id="expand-all">سب کھولیں</button>
+      <button type="button" id="collapse-all">سب بند</button>
+      <button type="button" id="reset-view">مرکز</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <main class="layout">
+    <section class="tree-panel">
+      <div id="tree-container">
+        <svg id="tree-svg"></svg>
+      </div>
+    </section>
+    <aside class="detail-panel" id="detail-panel">
+      <p class="detail-placeholder">← درخت میں کسی نام پر کلک کریں</p>
+    </aside>
+  </main>
+
+  <section class="feedback-section" id="feedback">
+    <div class="feedback-inner">
+      <div class="feedback-intro">
+        <h2>رائے اور معلومات</h2>
+        <p>
+          اگر کسی نام، رابطے، یا اولاد میں تصحیح ہے — یا کوئی معلومات شامل کرنی ہے —
+          یہاں لکھیں۔ آپ کا پیغام ای میل کے ذریعے بھیجا جائے گا۔
+        </p>
+        <p class="feedback-email-line">
+          <a href="mailto:htahit6200@gmail.com?subject=شجرہ%20نسب%20—%20رائے">htahit6200@gmail.com</a>
+        </p>
+      </div>
+      <form class="feedback-form" id="feedback-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="fb-name">آپ کا نام</label>
+            <input type="text" id="fb-name" name="name" class="urdu-input" placeholder="اختیاری" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="fb-contact">فون / ای میل (واپسی کے لیے)</label>
+            <input type="text" id="fb-contact" name="contact" dir="ltr" placeholder="optional" autocomplete="email" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="fb-type">موضوع</label>
+          <select id="fb-type" name="type">
+            <option value="correction">نام یا رابطے کی تصحیح</option>
+            <option value="new">نئی معلومات / اولاد</option>
+            <option value="question">سوال</option>
+            <option value="other">دیگر</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fb-message">پیغام *</label>
+          <textarea id="fb-message" name="message" class="urdu-input" rows="4" required placeholder="مثلاً: فلاں نام غلط ہے، صحیح نام … والد …"></textarea>
+        </div>
+        <div class="feedback-actions">
+          <button type="submit" class="btn-feedback">✉ ای میل کھولیں اور بھیجیں</button>
+          <p class="feedback-hint">آپ کا ای میل پروگرام (Gmail وغیرہ) کھل جائے گا — وہاں سے Send دبائیں۔</p>
+        </div>
+        <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span id="footer-title">شجرہ نسب — ملکان اعوان</span>
+    <span class="footer-sep">·</span>
+    <span>براہِ راست اولاد کے رابطے</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="app.js"></script>
+  <script src="feedback.js"></script>
+</body>
+</html>

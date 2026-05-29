@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شجرہ — نام ترمیم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="edit.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-row">
+      <div>
+        <h1>نام ترمیم — کلک کریں، بدلیں، محفوظ کریں</h1>
+        <p class="hint">درخت میں نام پر کلک کریں · دائیں طرف ترمیم · بیٹا شامل · غلط نام حذف</p>
+      </div>
+      <nav class="nav">
+        <a href="../../shajrah/index.html">شجرہ</a>
+        <a href="link.html">رابطے</a>
+        <a href="review.html">تصویر + مراجعت</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <input type="search" id="search" placeholder="نام تلاش…" autocomplete="off" />
+      <div id="search-results" class="search-results hidden"></div>
+    </div>
+    <span id="stats" class="stats"></span>
+    <span id="dirty-badge" class="dirty-badge hidden">● غیر محفوظ تبدیلیاں</span>
+    <button type="button" id="btn-save" class="btn-primary">💾 محفوظ کریں</button>
+    <button type="button" id="btn-download" class="btn-secondary">⬇ JSON ڈاؤن لوڈ</button>
+    <button type="button" id="btn-discard" class="btn-danger hidden">↩ تبدیلیاں ختم</button>
+  </div>
+
+  <p id="status-msg" class="status-msg" aria-live="polite"></p>
+
+  <main class="layout">
+    <section class="tree-section">
+      <div class="section-head">
+        <h2>شجرہ</h2>
+        <div class="mini-btns">
+          <button type="button" id="expand-all">سب کھولیں</button>
+          <button type="button" id="collapse-all">سب بند</button>
+        </div>
+      </div>
+      <div id="tree-container">
+        <svg id="tree-svg"></svg>
+      </div>
+    </section>
+
+    <aside class="editor-panel" id="editor-panel">
+      <p class="placeholder">← درخت یا تلاش سے کوئی نام منتخب کریں</p>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    سرور: <code>python serve.py</code> · پھر یہاں <strong>محفوظ کریں</strong> دبائیں ·
+    بیک اپ: <code>backups/</code> · بغیر سرور: JSON ڈاؤن لوڈ → <code>master_tree.json</code> میں رکھیں → <code>python sync_tree.py</code>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="edit.js"></script>
+</body>
+</html>

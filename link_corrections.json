@@ -1,0 +1,21 @@
+{
+  "_help": "Parent links from link editor. Apply: python apply_corrections.py link_corrections.json",
+  "parents": {
+    "mastar_khan": "kale_khan",
+    "mehr_khalid": "noor_zaman_kk",
+    "mehr_afzal": "noor_zaman_kk",
+    "mehr_maqbool": "noor_zaman_kk",
+    "mehr_fazil": "noor_zaman_kk",
+    "mehr_asif": "noor_zaman_kk"
+  },
+  "pages_reviewed": {
+    "PHOTO-2025-10-11-21-12-24.jpg": true,
+    "PHOTO-2025-10-11-21-12-24_6.jpg": true,
+    "PHOTO-2025-10-11-21-12-24_9.jpg": true,
+    "PHOTO-2025-10-11-21-12-25.jpg": true,
+    "PHOTO-2025-10-11-21-12-25_1.jpg": true,
+    "PHOTO-2025-10-11-21-12-25_2.jpg": true,
+    "PHOTO-2025-10-11-21-12-25_3.jpg": true,
+    "PHOTO-2025-10-11-21-12-25_4.jpg": true
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شجرہ — رابطے بنائیں (Link Editor)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="link.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-row">
+      <div>
+        <h1>رابطے درست کریں — والد ↔ بیٹا</h1>
+        <p class="hint">اوپر <strong>تصویر</strong> دیکھیں · نیچے پہلے <strong>بیٹا</strong> (نیلا) · پھر <strong>والد</strong> (سبز) پر کلک کریں</p>
+      </div>
+      <nav class="nav-links">
+        <a href="../../shajrah/index.html">شجرہ</a>
+        <a href="edit.html">نام ترمیم</a>
+        <a href="review.html">ناموں کی تصحیح</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button type="button" id="btn-prev">← پچھلی</button>
+    <label>
+      تصویر:
+      <select id="photo-select"></select>
+    </label>
+    <button type="button" id="btn-next">اگلی →</button>
+    <span id="page-info" class="page-info"></span>
+    <span id="name-count" class="name-count"></span>
+    <button type="button" id="btn-mark-reviewed" class="btn-ok">✓ صفحہ مکمل</button>
+    <button type="button" id="btn-save" class="btn-primary">محفوظ کریں (JSON)</button>
+    <button type="button" id="btn-clear-page">تبدیلیاں ختم</button>
+  </div>
+
+  <div id="link-status" class="link-status link-status-idle">
+    <span id="status-step" class="status-step">مرحلہ ۱</span>
+    <span id="status-text">بیٹا منتخب کرنے کے لیے نام پر کلک کریں</span>
+    <button type="button" id="btn-cancel" class="btn-cancel hidden">✕ منسوخ</button>
+  </div>
+
+  <div id="selection-box" class="selection-box hidden">
+    <div class="selection-label">منتخب بیٹا:</div>
+    <div id="selection-name" class="selection-name"></div>
+    <div class="selection-next">← اب والد والے نام پر کلک کریں</div>
+  </div>
+
+  <div id="click-toast" class="click-toast hidden" aria-live="polite"></div>
+
+  <main class="main-stack">
+    <!-- Photo always on top, full width -->
+    <section class="photo-section">
+      <h2 class="section-title">📷 اصل شجرہ (تصویر)</h2>
+      <div class="photo-frame">
+        <img id="photo" alt="shajrah page" />
+        <div id="photo-loading" class="photo-msg">تصویر لوڈ ہو رہی ہے…</div>
+        <div id="photo-error" class="photo-msg photo-error hidden">تصویر نہیں ملی — dropdown سے دوسری تصویر چنیں</div>
+      </div>
+      <p id="photo-caption" class="photo-caption"></p>
+    </section>
+
+    <section class="editor-section">
+      <div class="panel">
+        <h2>نام — رابطہ بنائیں <span class="chip child-chip">بیٹا</span> <span class="arrow">→</span> <span class="chip parent-chip">والد</span></h2>
+        <p class="subhint">اس صفحے کے نام + اولاد · دوسرے صفحے کی شاخیں صرف ایک منزل · <strong>5040*</strong> = اسی تصویر پر مکمل شاخ</p>
+        <label class="deep-toggle">
+          <input type="checkbox" id="deep-expand" />
+          تمام نام (گہرا) — دوسرے صفحات کی مکمل شاخیں بھی
+        </label>
+        <input type="search" id="filter" placeholder="نام تلاش…" class="filter" />
+        <div id="person-grid" class="person-grid"></div>
+      </div>
+
+      <div class="panel">
+        <h2>منتخب شخص کا خاکہ</h2>
+        <p class="subhint">صرف منتخب بیٹا + والد + بھائی (بڑے صفحات کے لیے)</p>
+        <div id="mini-svg-wrap" class="mini-svg-wrap">
+          <svg id="mini-svg" class="mini-svg"></svg>
+        </div>
+        <p id="graph-note" class="graph-note hidden"></p>
+      </div>
+
+      <div class="panel">
+        <h2>والد تلاش (کسی بھی صفحے سے)</h2>
+        <input type="search" id="parent-search" placeholder="والد کا نام…" class="filter" />
+        <div id="parent-search-results" class="search-results"></div>
+      </div>
+
+      <div class="panel changes-panel">
+        <h2>تبدیلیاں (<span id="change-count">0</span>)</h2>
+        <ul id="changes-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    JSON محفوظ → <code>python apply_corrections.py link_corrections.json</code> ·
+    <code>master_tree.json</code> میں براہِ راست ترمیم → <code>python sync_tree.py</code> → <kbd>Ctrl+F5</kbd>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="link.js"></script>
+</body>
+</html>

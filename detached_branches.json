@@ -1,0 +1,349 @@
+{
+  "note": "Hashim and Khair Awan branches removed from main tree",
+  "branches": [
+    {
+      "id": "hashim_nasir",
+      "name_urdu": "ہاشم بن ناصر",
+      "name_en": "Hashim bin Nasir",
+      "ref": "5039",
+      "clan": "ملکان مری",
+      "children": [
+        {
+          "id": "jamal_h",
+          "name_urdu": "جمال",
+          "name_en": "Jamal",
+          "children": [
+            {
+              "id": "ahmad_ali_h",
+              "name_urdu": "احمد علی",
+              "name_en": "Ahmad Ali",
+              "children": [
+                {
+                  "id": "kale_khan",
+                  "name_urdu": "کمال خان",
+                  "name_en": "Kamal Khan",
+                  "children": [
+                    {
+                      "id": "noor_zaman_kk",
+                      "name_urdu": "نور زمان",
+                      "name_en": "Noor Zaman",
+                      "note": "شجرہ نویس",
+                      "children": [
+                        {
+                          "id": "habib_rehman_nz",
+                          "name_urdu": "حبیب الرحمن",
+                          "name_en": "Habib-ur-Rehman",
+                          "children": [
+                            {
+                              "id": "maqsood_hr",
+                              "name_urdu": "مقصود",
+                              "name_en": "Maqsood",
+                              "children": [
+                                {
+                                  "id": "muhammad_mahfooz_hr",
+                                  "name_urdu": "محمد محفوظ",
+                                  "name_en": "Muhammad Mahfooz"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "anwar_zaman_kk",
+                      "name_urdu": "انور زمان",
+                      "name_en": "Anwar Zaman",
+                      "children": [
+                        {
+                          "id": "naveed_az",
+                          "name_urdu": "نوید",
+                          "name_en": "Naveed"
+                        },
+                        {
+                          "id": "javed_az",
+                          "name_urdu": "جاوید",
+                          "name_en": "Javeed"
+                        },
+                        {
+                          "id": "zubair_az",
+                          "name_urdu": "زبیر",
+                          "name_en": "Zubair"
+                        },
+                        {
+                          "id": "mehr_afzal",
+                          "name_urdu": "مہر افضل",
+                          "name_en": "Mehr Afzal"
+                        },
+                        {
+                          "id": "mehr_maqbool",
+                          "name_urdu": "مہر مقبول",
+                          "name_en": "Mehr Maqbool",
+                          "children": [
+                            {
+                              "id": "samiullah",
+                              "name_urdu": "سمیع اللہ",
+                              "name_en": "Samiullah",
+                              "children": [
+                                {
+                                  "id": "rehan",
+                                  "name_urdu": "ریحان",
+                                  "name_en": "Rehan"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mehr_khalid",
+                          "name_urdu": "مہر خالد",
+                          "name_en": "Mehr Khalid",
+                          "children": [
+                            {
+                              "id": "farman_ul_haq",
+                              "name_urdu": "فرمان الحق",
+                              "name_en": "Farman-ul-Haq",
+                              "children": [
+                                {
+                                  "id": "kamran",
+                                  "name_urdu": "کامران",
+                                  "name_en": "Kamran"
+                                },
+                                {
+                                  "id": "luqman",
+                                  "name_urdu": "لقمان",
+                                  "name_en": "Luqman"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "farhan",
+                              "name_urdu": "فرحان",
+                              "name_en": "Farhan",
+                              "children": [
+                                {
+                                  "id": "adnan_f",
+                                  "name_urdu": "عدنان",
+                                  "name_en": "Adnan"
+                                },
+                                {
+                                  "id": "ihsan",
+                                  "name_urdu": "احسان",
+                                  "name_en": "Ihsan"
+                                },
+                                {
+                                  "id": "amman",
+                                  "name_urdu": "عمان",
+                                  "name_en": "Amman"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "fazal_rehman_kk",
+                      "name_urdu": "فضل الرحمن",
+                      "name_en": "Fazal-ur-Rehman",
+                      "children": [
+                        {
+                          "id": "ubaid_fr",
+                          "name_urdu": "عبید",
+                          "name_en": "Ubaid"
+                        },
+                        {
+                          "id": "junaid",
+                          "name_urdu": "جنید",
+                          "name_en": "Junaid"
+                        },
+                        {
+                          "id": "mehr_fazil",
+                          "name_urdu": "مہر فاضل",
+                          "name_en": "Mehr Fazil",
+                          "children": [
+                            {
+                              "id": "talha",
+                              "name_urdu": "طلحہ",
+                              "name_en": "Talha",
+                              "children": [
+                                {
+                                  "id": "abdullah_mf",
+                                  "name_urdu": "عبداللہ",
+                                  "name_en": "Abdullah"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mast_rehman",
+                      "name_urdu": "مست رحمان",
+                      "name_en": "Mast Rehman",
+                      "ref": "5040",
+                      "children": [
+                        {
+                          "id": "mehr_asif",
+                          "name_urdu": "مہر آصف",
+                          "name_en": "Mehr Asif",
+                          "children": [
+                            {
+                              "id": "ahsan_ma",
+                              "name_urdu": "احسن",
+                              "name_en": "Ahsan"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mirza_5040",
+                  "name_urdu": "مرزا بن احمد علی",
+                  "name_en": "Mirza bin Ahmed Ali",
+                  "ref": "5040",
+                  "clan": "ملگان مریل",
+                  "children": [
+                    {
+                      "id": "dildar",
+                      "name_urdu": "دلدار",
+                      "name_en": "Dildar",
+                      "children": [
+                        {
+                          "id": "abid_d",
+                          "name_urdu": "عابد",
+                          "name_en": "Abid"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "gulzar",
+                      "name_urdu": "گلزار",
+                      "name_en": "Gulzar",
+                      "children": [
+                        {
+                          "id": "sarfaraz_gz",
+                          "name_urdu": "سرفراز",
+                          "name_en": "Sarfaraz"
+                        },
+                        {
+                          "id": "shahid_gz",
+                          "name_urdu": "شاہد",
+                          "name_en": "Shahid",
+                          "children": [
+                            {
+                              "id": "mohsin_gz",
+                              "name_urdu": "محسن",
+                              "name_en": "Mohsin"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "yasir_gz",
+                          "name_urdu": "یاسر",
+                          "name_en": "Yasir"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "bhildar",
+                      "name_urdu": "بھلدار",
+                      "name_en": "Bhildar",
+                      "children": [
+                        {
+                          "id": "maroof",
+                          "name_urdu": "معروف",
+                          "name_en": "Maroof"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "abdul_razzaq_mz",
+                      "name_urdu": "عبدالرزاق",
+                      "name_en": "Abdul Razzaq"
+                    },
+                    {
+                      "id": "muhammad_iqbal_mz",
+                      "name_urdu": "محمد اقبال",
+                      "name_en": "Muhammad Iqbal",
+                      "children": [
+                        {
+                          "id": "majid_iq",
+                          "name_urdu": "ماجد",
+                          "name_en": "Majid"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mastar_khan",
+                  "name_urdu": "مستار خان بن کمال خان",
+                  "name_en": "Mastar Khan",
+                  "ref": "5040",
+                  "clan": "ملگان مریل",
+                  "children": [
+                    {
+                      "id": "abid_mk",
+                      "name_urdu": "عابد",
+                      "name_en": "Abid"
+                    },
+                    {
+                      "id": "adil_mk",
+                      "name_urdu": "عادل",
+                      "name_en": "Adil"
+                    },
+                    {
+                      "id": "adeel_mk",
+                      "name_urdu": "عدیل",
+                      "name_en": "Adeel"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bakhtar_h",
+          "name_urdu": "بختار یا بہادر",
+          "name_en": "Bakhtar ya Bahadur",
+          "ref": "5050",
+          "note": "5039 سے — مکمل شاخ صفحہ 5050"
+        }
+      ]
+    },
+    {
+      "id": "khair_awan",
+      "name_urdu": "خیر اعوان",
+      "name_en": "Khair Awan",
+      "ref": "5037",
+      "clan": "ملتان",
+      "children": [
+        {
+          "id": "noor_zaman_ph",
+          "name_urdu": "نور زمان ولد کمال خان",
+          "name_en": "Noor Zaman son of Kamal Khan"
+        },
+        {
+          "id": "muhammad_iqbal_ph",
+          "name_urdu": "محمد اقبال ولد گل محمد",
+          "name_en": "Muhammad Iqbal son of Gul Muhammad"
+        },
+        {
+          "id": "muhammad_rafiq_ph",
+          "name_urdu": "محمد رفیق ولد مہر دین",
+          "name_en": "Muhammad Rafiq son of Mehr Din"
+        },
+        {
+          "id": "safdar_khan_ph",
+          "name_urdu": "صفدر خان (پٹواری)",
+          "name_en": "Safdar Khan Patwari"
+        }
+      ]
+    }
+  ]
+}

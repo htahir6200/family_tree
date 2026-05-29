@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شجرہ — تصحیح و مراجعت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="review.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>تصحیح نام و رابطے</h1>
+    <p>بائیں: اصل تصویر · دائیں: نام میں تصحیح · والد بدلیں · پھر محفوظ کریں</p>
+    <div class="header-links">
+      <a href="../../shajrah/index.html">← شجرہ دیکھیں</a>
+      <a href="edit.html">نام ترمیم</a>
+      <a href="link.html">رابطے بنائیں</a>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <label>
+      تصویر / صفحہ:
+      <select id="image-select"></select>
+    </label>
+    <label>
+      تلاش:
+      <input type="search" id="filter" placeholder="نام…" />
+    </label>
+    <button type="button" id="mark-reviewed">✓ صفحہ مکمل</button>
+    <button type="button" id="download-json">محفوظ کریں (JSON)</button>
+  </div>
+
+  <div class="main-grid">
+    <section class="photo-panel">
+      <img id="photo" alt="shajrah page" />
+      <p id="photo-label"></p>
+    </section>
+    <section class="names-panel">
+      <div id="names-list"></div>
+    </section>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="review.js"></script>
+</body>
+</html>

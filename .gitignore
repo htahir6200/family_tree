@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Optional: keep backups local only (remove line if you want backups in repo)
+backups/
+
+# Local check outputs
+bakhtawar_check.txt
+tree_diff.txt

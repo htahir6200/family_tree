@@ -1,0 +1,136 @@
+:root {
+  --bg: #0f1a28;
+  --panel: #152536;
+  --gold: #c9a227;
+  --text: #eee8d5;
+  --muted: #9aa8b8;
+  --border: rgba(201, 162, 39, 0.35);
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-urdu);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem 1.5rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 { color: var(--gold); font-size: 1.6rem; }
+.header p { color: var(--muted); margin-top: 0.35rem; font-size: 0.95rem; }
+
+.header-links { margin-top: 0.5rem; }
+.header-links a { color: var(--gold); text-decoration: none; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.toolbar label { display: flex; align-items: center; gap: 0.5rem; }
+
+.toolbar select,
+.toolbar input,
+.toolbar button {
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-family: var(--font-urdu);
+}
+
+.toolbar button { cursor: pointer; background: #1a4d3a; border-color: #2d6b52; }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: calc(100vh - 160px);
+}
+
+@media (max-width: 900px) {
+  .main-grid { grid-template-columns: 1fr; }
+}
+
+.photo-panel {
+  padding: 1rem;
+  border-left: 1px solid var(--border);
+  overflow: auto;
+  background: #0a121c;
+}
+
+.photo-panel img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+#photo-label {
+  margin-top: 0.5rem;
+  color: var(--gold);
+  text-align: center;
+}
+
+.names-panel {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
+}
+
+.name-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.name-card h3 {
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.name-card label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.name-card input,
+.name-card select {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #0f1a28;
+  color: var(--text);
+  font-family: var(--font-urdu);
+}
+
+.name-card .meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.empty-msg {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem;
+}
