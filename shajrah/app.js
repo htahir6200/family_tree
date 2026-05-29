@@ -429,13 +429,14 @@
       ${MOBILE ? '<button type="button" class="back-to-tree" id="back-to-tree">↑ درخت پر واپس</button>' : ""}
       <h2>${esc(data.name_urdu || data.id)}</h2>
       <p class="en-name">${esc(data.name_en || "")}</p>
-      <dl>
-        <dt>شناخت</dt><dd dir="ltr">${esc(data.id)}</dd>
-        ${data.ref ? `<dt>صفحہ</dt><dd>${esc(data.ref)}</dd>` : ""}
-        ${data.clan ? `<dt>قبیلہ</dt><dd>${esc(data.clan)}</dd>` : ""}
+      ${
+        parent || data.note
+          ? `<dl>
         ${parent ? `<dt>والد</dt><dd>${esc(parent.name_urdu || parent.name_en || parent.id)}</dd>` : ""}
         ${data.note ? `<dt>نوٹ</dt><dd>${esc(data.note)}</dd>` : ""}
-      </dl>
+      </dl>`
+          : ""
+      }
       <div class="ancestors">
         <h3>سلسلہ</h3>
         <p class="ancestor-chain">${chain.map(esc).join(" ← ")}</p>
