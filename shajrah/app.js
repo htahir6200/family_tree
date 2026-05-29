@@ -312,9 +312,6 @@
     svg.attr("width", width).attr("height", height);
     g.attr("transform", `translate(${offsetX}, 32)`);
 
-    container.scrollTop = 0;
-    container.scrollLeft = 0;
-
     const linkSel = g.selectAll("path.link").data(links, (d) => d.id);
     linkSel
       .enter()
