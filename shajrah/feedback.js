@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const TO_EMAIL = "htahit6200@gmail.com";
+  const TO_EMAIL = "htahir6200@gmail.com";
   const FORMSUBMIT_URL = "https://formsubmit.co/ajax/" + TO_EMAIL;
 
   const typeLabels = {
