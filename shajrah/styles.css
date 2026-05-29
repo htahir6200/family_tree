@@ -366,6 +366,8 @@ body {
 .node-child .node-label {
   text-anchor: start;
   dominant-baseline: middle;
+  direction: ltr;
+  unicode-bidi: plaintext;
 }
 
 text.section-label {
@@ -606,10 +608,6 @@ text.section-label {
 @media (min-width: 700px) {
   .credits-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .credits-highlight {
-    grid-row: span 2;
   }
 }
 

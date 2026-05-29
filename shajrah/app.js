@@ -314,28 +314,99 @@
     return { nodes, links, width, height, focusY };
   }
 
-  function labelText(data) {
+  function personName(data, truncate) {
     const name = data.name_urdu || data.name_en || data.id || "";
+    if (!truncate) return name;
     const max = MOBILE ? 22 : 28;
     return name.length > max ? name.slice(0, max) + "…" : name;
+  }
+
+  function labelText(data) {
+    return personName(data, true);
   }
 
   function linkPath(l) {
     return l.d || "";
   }
 
-  function childLabelX() {
-    return NODE_R + 12;
-  }
-
   function nodeLabelAttrs(d) {
     if (d.kind === "child") {
-      return { x: childLabelX(), y: 0, anchor: "start", baseline: "middle" };
+      return { x: NODE_R + 10, y: 0, anchor: "start", baseline: "middle" };
     }
     if (d.kind === "label") {
       return { x: 0, y: 0, anchor: "start", baseline: "auto" };
     }
     return { x: 0, y: -(NODE_R + 8), anchor: "middle", baseline: "auto" };
+  }
+
+  /** Measure labels and reposition so names never sit on top of circles. */
+  function layoutNodeLabels(svgWidth) {
+    const offsetX = svgWidth / 2;
+    const margin = 20;
+    let maxRight = svgWidth;
+
+    g.selectAll("g.node").each(function (d) {
+      if (d.kind === "label") return;
+
+      const group = d3.select(this);
+      const text = group.select("text.node-label");
+      const textNode = text.node();
+      if (!textNode) return;
+
+      const dotR = +(group.select("circle.dot").attr("r") || NODE_R);
+      const isChild = d.kind === "child";
+      const maxLabelW = Math.max(120, (container.clientWidth || 320) - offsetX - d.x - margin);
+
+      let fs = LABEL_SIZE;
+      const fullName = d.data ? personName(d.data, false) : d.label || "";
+      text.text(fullName || text.text());
+
+      if (isChild) {
+        text
+          .attr("text-anchor", "start")
+          .attr("dominant-baseline", "middle")
+          .attr("direction", null)
+          .attr("y", 0);
+
+        let x = dotR + 10;
+        text.attr("x", x).style("font-size", fs + "px");
+
+        let box = textNode.getBBox();
+        while (fs > 10 && box.width > maxLabelW) {
+          fs -= 1;
+          text.style("font-size", fs + "px");
+          box = textNode.getBBox();
+        }
+
+        while (box.x < dotR + 3 && x < dotR + 60) {
+          x += 3;
+          text.attr("x", x);
+          box = textNode.getBBox();
+        }
+
+        maxRight = Math.max(maxRight, offsetX + d.x + box.x + box.width + margin);
+      } else {
+        text
+          .attr("text-anchor", "middle")
+          .attr("x", 0)
+          .style("font-size", fs + "px");
+
+        let box = textNode.getBBox();
+        const maxSpineW = (container.clientWidth || 320) - margin * 2;
+        while (fs > 10 && box.width > maxSpineW) {
+          fs -= 1;
+          text.style("font-size", fs + "px");
+          box = textNode.getBBox();
+        }
+
+        text.attr("y", -dotR - Math.max(10, box.height * 0.55 + 6));
+        maxRight = Math.max(maxRight, offsetX + box.width / 2 + margin);
+      }
+    });
+
+    if (maxRight > svgWidth) {
+      svg.attr("width", maxRight);
+    }
   }
 
   function renderView() {
@@ -391,7 +462,7 @@
       .text((d) => {
         if (d.kind === "more-up") return d.label;
         if (d.kind === "label") return d.label;
-        return labelText(d.data);
+        return personName(d.data, d.kind !== "child");
       });
 
     nodeEnter
@@ -409,7 +480,7 @@
       .attr("dominant-baseline", (d) => nodeLabelAttrs(d).baseline)
       .text((d) => {
         if (d.kind === "more-up" || d.kind === "label") return d.label;
-        return labelText(d.data);
+        return personName(d.data, d.kind !== "child");
       });
 
     nodeUpdate
@@ -417,6 +488,8 @@
       .classed("highlight", (d) => d.id === searchHighlightId);
 
     nodeSel.exit().remove();
+
+    layoutNodeLabels(width);
   }
 
   function navigateTo(id, options = {}) {
