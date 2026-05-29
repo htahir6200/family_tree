@@ -10,12 +10,20 @@ After setup, the site will be at:
 
 ## Deploy to GitHub Pages
 
-1. Create a new GitHub repository and push this project.
+1. Push to `main` — the workflow publishes `shajrah/` to the `gh-pages` branch.
 2. In the repo: **Settings → Pages → Build and deployment**
-   - Source: **GitHub Actions**
-3. Push to `main` — the workflow in `.github/workflows/pages.yml` publishes the `shajrah/` folder automatically.
+   - **Source:** Deploy from a branch
+   - **Branch:** `gh-pages` → `/ (root)`
+3. Wait ~1 minute. Your site:
 
-Only these files are published:
+   **https://htahir6200.github.io/family_tree/**
+
+If the Actions tab shows a red X, open the failed run and check the error message.
+
+### First-time setup note
+
+The old workflow failed with **404** if Pages was not enabled. This workflow uses the
+`gh-pages` branch instead — you only need the branch setting above (not “GitHub Actions” source).
 
 ```
 shajrah/
