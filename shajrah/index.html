@@ -21,29 +21,9 @@
         <p id="title-en">Malikan Awan Family Tree</p>
         <p class="header-intro">خاندانی شجرہ کو ڈیجیٹل بنانے کی ایک چھوٹی سی کوشش — اگر کوئی نام غائب ہو یا تصحیح درکار ہو تو براہِ کرم <a class="header-link" href="#feedback">رائے دیں</a>۔ <a class="header-link" href="#credits">تعارف</a></p>
       </div>
-      <p class="header-tagline">نیچے تصویر دیکھیں — آسان طریقہ</p>
+      <p class="header-tagline">نام پر دبائیں — اولاد دیکھیں</p>
     </div>
   </header>
-
-  <div class="visual-guide" aria-label="استعمال کا آسان طریقہ">
-    <div class="guide-item">
-      <span class="guide-icon" aria-hidden="true">👆</span>
-      <span class="guide-dot sample-green" aria-hidden="true"></span>
-      <span class="guide-text">نام دبائیں</span>
-    </div>
-    <div class="guide-item">
-      <span class="guide-icon" aria-hidden="true">👨‍👦</span>
-      <span class="guide-text">اولاد دیکھیں</span>
-    </div>
-    <div class="guide-item">
-      <span class="guide-dot sample-gold" aria-hidden="true"></span>
-      <span class="guide-text">منتخب نام</span>
-    </div>
-    <div class="guide-item">
-      <span class="guide-icon" aria-hidden="true">⬆️</span>
-      <span class="guide-text">مزید آباء</span>
-    </div>
-  </div>
 
   <div class="toolbar">
     <div class="search-wrap">
@@ -52,17 +32,14 @@
       <div id="search-results" class="search-results hidden"></div>
     </div>
     <div class="toolbar-buttons">
-      <button type="button" id="go-root" title="جڑ — شروع">
+      <button type="button" id="go-root" class="icon-btn" title="شروع" aria-label="شروع">
         <span class="btn-icon" aria-hidden="true">🏠</span>
-        <span class="btn-label">جڑ</span>
       </button>
-      <button type="button" id="more-ancestors" title="مزید آباء">
+      <button type="button" id="more-ancestors" class="icon-btn" title="اوپر" aria-label="اوپر">
         <span class="btn-icon" aria-hidden="true">⬆️</span>
-        <span class="btn-label">آباء</span>
       </button>
-      <button type="button" id="reset-view" title="مرکز">
-        <span class="btn-icon" aria-hidden="true">🎯</span>
-        <span class="btn-label">مرکز</span>
+      <button type="button" id="reset-view" class="icon-btn" title="واپس" aria-label="واپس">
+        <span class="btn-icon" aria-hidden="true">↩️</span>
       </button>
     </div>
     <div class="stats" id="stats"></div>
