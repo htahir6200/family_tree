@@ -257,7 +257,6 @@
       hasKids: children.length > 0,
     });
 
-    const children = getChildren(focus);
     const showChildren = expandedIds.has(focus.id) && children.length;
 
     const childPositions = [];
