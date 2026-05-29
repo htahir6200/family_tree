@@ -18,6 +18,8 @@
   let searchHighlightId = null;
   let focusId = null;
   let ancestorReveal = ANCESTOR_DEFAULT;
+  /** Node ids whose children are visible in the current view. */
+  let expandedIds = new Set();
 
   const container = document.getElementById("tree-container");
   const svgEl = document.getElementById("tree-svg");
@@ -255,8 +257,11 @@
       hasKids: children.length > 0,
     });
 
+    const children = getChildren(focus);
+    const showChildren = expandedIds.has(focus.id) && children.length;
+
     const childPositions = [];
-    if (children.length) {
+    if (showChildren) {
       y += ROW_H * 0.45;
       children.forEach((person) => {
         childPositions.push({ person, y });
@@ -292,6 +297,8 @@
         y: focusY + (childPositions[0].y - focusY) * 0.45,
         label: `اولاد (${children.length})`,
       });
+    } else if (children.length) {
+      y += ROW_H * 0.35;
     } else {
       y += ROW_H;
     }
@@ -323,6 +330,16 @@
 
   function labelText(data) {
     return personName(data, true);
+  }
+
+  function expandSymbol(d) {
+    if (!d.hasKids || d.kind === "more-up" || d.kind === "label") return "";
+    if (d.id === focusId && expandedIds.has(focusId)) return "−";
+    return "+";
+  }
+
+  function isNodeExpanded(d) {
+    return d.hasKids && d.id === focusId && expandedIds.has(focusId);
   }
 
   function linkPath(l) {
@@ -439,6 +456,7 @@
         if (d.kind === "child") c += " node-child";
         if (d.kind === "label") c += " node-label-only";
         if (d.hasKids) c += " has-children";
+        if (isNodeExpanded(d)) c += " expanded";
         return c;
       })
       .attr("transform", (d) => `translate(${d.x},${d.y})`)
@@ -473,10 +491,13 @@
     nodeEnter
       .filter((d) => d.hasKids && d.kind !== "label" && d.kind !== "more-up")
       .append("text")
-      .attr("class", "kids-badge")
+      .attr("class", "expand-icon")
+      .attr("x", 0)
+      .attr("y", 1)
       .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
       .attr("pointer-events", "none")
-      .text("＋");
+      .text((d) => expandSymbol(d));
 
     const nodeUpdate = nodeEnter.merge(nodeSel);
     nodeUpdate.attr("transform", (d) => `translate(${d.x},${d.y})`);
@@ -492,9 +513,10 @@
       });
 
     nodeUpdate
-      .select("text.kids-badge")
-      .attr("x", (d) => (d.kind === "child" ? -(NODE_R + 8) : 0))
-      .attr("y", (d) => (d.kind === "child" ? 1 : NODE_R + 14));
+      .select("text.expand-icon")
+      .text((d) => expandSymbol(d));
+
+    nodeUpdate.classed("expanded", (d) => isNodeExpanded(d));
 
     nodeUpdate
       .classed("selected", (d) => d.id === selectedId)
@@ -509,6 +531,7 @@
     focusId = id;
     ancestorReveal = ANCESTOR_DEFAULT;
     selectedId = id;
+    expandedIds.add(id);
 
     if (options.fromSearch) {
       searchHighlightId = id;
@@ -533,6 +556,21 @@
       const maxPossible = chain.length - 1;
       ancestorReveal = Math.min(ancestorReveal + 1, maxPossible);
       renderView();
+      return;
+    }
+
+    const onCircle = ev.target.matches && ev.target.matches(".hit, .dot");
+
+    if (onCircle && d.hasKids) {
+      if (d.id === focusId) {
+        if (expandedIds.has(focusId)) expandedIds.delete(focusId);
+        else expandedIds.add(focusId);
+        selectedId = focusId;
+        showDetail(idToNode.get(focusId), { fromTree: true });
+        renderView();
+        return;
+      }
+      navigateTo(d.id, { fromTree: true });
       return;
     }
 
@@ -684,6 +722,7 @@
         buildSearchIndex();
         focusId = data.tree.id;
         ancestorReveal = ANCESTOR_DEFAULT;
+        expandedIds = new Set([focusId]);
         setupSvg();
         renderView();
         showDetail(idToNode.get(focusId), {});

@@ -357,6 +357,22 @@ body {
   stroke-width: 2.5px;
 }
 
+.node.has-children.expanded circle.dot {
+  fill: var(--green-light);
+}
+
+text.expand-icon {
+  fill: var(--cream);
+  font-family: var(--font-en);
+  font-size: 15px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.node-focus text.expand-icon {
+  fill: #0a1628;
+}
+
 .node-focus circle.dot {
   fill: var(--gold);
   stroke: #fff;
@@ -392,14 +408,6 @@ text.section-label {
   pointer-events: none;
 }
 
-text.kids-badge {
-  fill: var(--gold-light);
-  font-family: var(--font-en);
-  font-size: 15px;
-  font-weight: 700;
-  pointer-events: none;
-}
-
 .node:hover circle.dot,
 .node:active circle.dot {
   fill: var(--green-light);
@@ -409,7 +417,8 @@ text.kids-badge {
   font-family: var(--font-urdu);
   font-size: 12px;
   fill: var(--cream);
-  pointer-events: none;
+  pointer-events: all;
+  cursor: pointer;
   text-anchor: middle;
   paint-order: stroke fill;
   stroke: rgba(10, 22, 40, 0.85);

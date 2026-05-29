@@ -2,6 +2,7 @@
   "use strict";
 
   const TO_EMAIL = "htahit6200@gmail.com";
+  const FORMSUBMIT_URL = "https://formsubmit.co/ajax/" + TO_EMAIL;
 
   const typeLabels = {
     correction: "نام یا رابطے کی تصحیح",
@@ -12,6 +13,7 @@
 
   const form = document.getElementById("feedback-form");
   const statusEl = document.getElementById("feedback-status");
+  const submitBtn = form && form.querySelector('button[type="submit"]');
   if (!form) return;
 
   form.addEventListener("submit", (ev) => {
@@ -28,6 +30,48 @@
     }
 
     const subject = "شجرہ نسب — " + (typeLabels[type] || "رائے");
+    const payload = {
+      _subject: subject,
+      _template: "table",
+      _captcha: "false",
+      موضوع: typeLabels[type] || type,
+      نام: name || "—",
+      رابطہ: contact || "—",
+      پیغام: message,
+      وقت: new Date().toLocaleString("ur-PK"),
+    };
+
+    if (contact.includes("@")) {
+      payload._replyto = contact;
+    }
+
+    setSubmitting(true);
+    setStatus("بھیجا جا رہا ہے…", "ok");
+
+    fetch(FORMSUBMIT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Network error");
+        return res.json();
+      })
+      .then(() => {
+        setStatus("شکریہ — آپ کا پیغام بھیج دیا گیا۔", "ok");
+        form.reset();
+      })
+      .catch(() => {
+        setStatus("براہِ کرم دوبارہ کوشش کریں یا نیچے ای میل استعمال کریں۔", "err");
+        openMailtoFallback({ name, contact, type, message, subject });
+      })
+      .finally(() => setSubmitting(false));
+  });
+
+  function openMailtoFallback({ name, contact, type, message, subject }) {
     const bodyLines = [
       "موضوع: " + (typeLabels[type] || type),
       name ? "نام: " + name : "",
@@ -37,7 +81,6 @@
       message,
       "",
       "---",
-      "بھیجا گیا: شجرہ نسب ویب سائٹ سے",
       "وقت: " + new Date().toLocaleString("ur-PK"),
     ].filter(Boolean);
 
@@ -49,13 +92,16 @@
       "&body=" +
       encodeURIComponent(bodyLines.join("\n"));
 
-    setStatus("ای میل پروگرام کھل رہا ہے… Send دبائیں۔", "ok");
-
-    // Short delay so status is visible on mobile
     setTimeout(() => {
       window.location.href = mailto;
-    }, 300);
-  });
+    }, 600);
+  }
+
+  function setSubmitting(on) {
+    if (!submitBtn) return;
+    submitBtn.disabled = on;
+    submitBtn.textContent = on ? "بھیجا جا رہا ہے…" : "بھیجیں";
+  }
 
   function setStatus(msg, type) {
     if (!statusEl) return;
