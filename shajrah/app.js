@@ -10,6 +10,7 @@
 
   let payload, rootHierarchy, svg, g, zoom, treeLayout;
   let allNodes = [];
+  let searchIndex = [];
   let idToNode = new Map();
   let selectedId = null;
 
@@ -18,6 +19,7 @@
   const detailPanel = document.getElementById("detail-panel");
   const searchInput = document.getElementById("search");
   const searchResults = document.getElementById("search-results");
+  const treePanel = document.querySelector(".tree-panel");
 
   function loadTreeData() {
     return fetch("data/tree_version.json", { cache: "no-store" })
@@ -32,6 +34,116 @@
         if (!r.ok) throw new Error("Could not load tree data");
         return r.json();
       });
+  }
+
+  /** Normalize Urdu/English for flexible matching. */
+  function normalizeText(s) {
+    return String(s || "")
+      .replace(/[\u0640\u200c\u200d\ufeff]/g, "")
+      .replace(/[أإآٱ]/g, "ا")
+      .replace(/[یيى]/g, "ی")
+      .replace(/ة/g, "ه")
+      .replace(/[\u064B-\u065F\u0670]/g, "")
+      .replace(/[^\p{L}\p{N}\s]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    if (!a.length) return b.length;
+    if (!b.length) return a.length;
+    const row = [];
+    for (let j = 0; j <= b.length; j++) row[j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      let prev = i - 1;
+      row[0] = i;
+      for (let j = 1; j <= b.length; j++) {
+        const val =
+          a[i - 1] === b[j - 1]
+            ? prev
+            : Math.min(prev, row[j], row[j - 1]) + 1;
+        prev = row[j];
+        row[j] = val;
+      }
+    }
+    return row[b.length];
+  }
+
+  function fuzzyWordScore(query, word) {
+    if (!query || !word) return 0;
+    if (word.includes(query)) return 100;
+    if (word.startsWith(query)) return 95;
+    const maxDist = query.length <= 3 ? 1 : query.length <= 6 ? 2 : 3;
+    const dist = levenshtein(query, word.slice(0, query.length + 2));
+    if (dist <= maxDist && word.length >= query.length - 1) {
+      return 70 - dist * 10;
+    }
+    if (word.length >= query.length) {
+      for (let i = 0; i <= word.length - query.length; i++) {
+        const slice = word.slice(i, i + query.length + 1);
+        if (levenshtein(query, slice.slice(0, query.length)) <= maxDist) {
+          return 55 - dist * 5;
+        }
+      }
+    }
+    return 0;
+  }
+
+  function scorePerson(person, queryRaw) {
+    const q = normalizeText(queryRaw);
+    if (!q) return 0;
+
+    const qTokens = q.split(/\s+/).filter(Boolean);
+    const fields = [
+      { text: person.name_urdu, weight: 1.0 },
+      { text: person.name_en, weight: 0.85 },
+      { text: person.id.replace(/_/g, " "), weight: 0.5 },
+    ];
+
+    let best = 0;
+
+    for (const { text, weight } of fields) {
+      const n = normalizeText(text);
+      if (!n) continue;
+
+      if (n.includes(q)) best = Math.max(best, 100 * weight);
+
+      const allTokensMatch = qTokens.every((tok) =>
+        n.split(/\s+/).some((w) => fuzzyWordScore(tok, w) >= 50)
+      );
+      if (allTokensMatch && qTokens.length > 1) best = Math.max(best, 88 * weight);
+
+      for (const tok of qTokens) {
+        for (const word of n.split(/\s+/)) {
+          best = Math.max(best, fuzzyWordScore(tok, word) * weight);
+        }
+        best = Math.max(best, fuzzyWordScore(tok, n) * weight * 0.9);
+      }
+    }
+
+    return best;
+  }
+
+  function buildSearchIndex() {
+    searchIndex = allNodes.map((n) => ({
+      person: n,
+      urdu: normalizeText(n.name_urdu),
+      en: normalizeText(n.name_en),
+    }));
+  }
+
+  function searchPersons(query) {
+    const q = query.trim();
+    const minLen = /[\u0600-\u06FF]/.test(q) ? 1 : 2;
+    if (q.length < minLen) return [];
+
+    return searchIndex
+      .map((entry) => ({ person: entry.person, score: scorePerson(entry.person, q) }))
+      .filter((r) => r.score >= 45)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 25);
   }
 
   function buildIndex(node, parent = null) {
@@ -62,7 +174,6 @@
     }
   }
 
-  /** Pan/zoom on empty background only — taps on nodes expand/select. */
   function zoomFilter(event) {
     if (event.type === "wheel") return true;
     if (event.ctrlKey || event.metaKey) return true;
@@ -110,20 +221,17 @@
     update(d);
   }
 
-  function selectNode(d) {
+  function selectNode(d, options = {}) {
     selectedId = d.data.id;
-    showDetail(d.data);
+    showDetail(d.data, options);
     g.selectAll("g.node").classed("selected", (n) => n.data.id === selectedId);
-    if (MOBILE && detailPanel) {
-      detailPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
   }
 
   function onNodeActivate(ev, d) {
     ev.preventDefault();
     ev.stopPropagation();
     if (hasHidden(d)) toggle(d);
-    selectNode(d);
+    selectNode(d, { fromTree: true });
   }
 
   function update(source) {
@@ -192,6 +300,8 @@
       d.x0 = d.x;
       d.y0 = d.y;
     });
+
+    return nodes;
   }
 
   function labelText(data) {
@@ -204,7 +314,7 @@
     return `M ${s.y} ${s.x} C ${(s.y + t.y) / 2} ${s.x}, ${(s.y + t.y) / 2} ${t.x}, ${t.y} ${t.x}`;
   }
 
-  function showDetail(data) {
+  function showDetail(data, options = {}) {
     const parent = data.parentRef ? idToNode.get(data.parentRef) : null;
     const chain = [];
     let cur = data;
@@ -214,6 +324,7 @@
     }
 
     detailPanel.innerHTML = `
+      ${MOBILE ? '<button type="button" class="back-to-tree" id="back-to-tree">↑ درخت پر واپس</button>' : ""}
       <h2>${esc(data.name_urdu || data.id)}</h2>
       <p class="en-name">${esc(data.name_en || "")}</p>
       <dl>
@@ -228,6 +339,50 @@
         <p class="ancestor-chain">${chain.map(esc).join(" ← ")}</p>
       </div>
     `;
+
+    const backBtn = document.getElementById("back-to-tree");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => scrollToTreePanel(true));
+    }
+
+    // Never auto-jump away from tree on search — user scrolls to details themselves
+    if (options.fromTree && MOBILE && !options.fromSearch) {
+      detailPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function scrollToTreePanel(smooth) {
+    if (treePanel) {
+      treePanel.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+    }
+    window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+  }
+
+  /** Pan/zoom so the node sits in the centre of the tree view. */
+  function focusOnNode(d) {
+    if (!d || !svg || !zoom) return;
+
+    scrollToTreePanel(false);
+
+    const panelW = container.clientWidth;
+    const panelH = container.clientHeight;
+    const scale = MOBILE ? 1.2 : 1.35;
+    const offsetX = MOBILE ? 48 : 80;
+    const offsetY = 56;
+
+    const tx = panelW / 2 - d.y * scale - offsetX * scale;
+    const ty = panelH / 2 - d.x * scale - offsetY * scale;
+
+    svg
+      .transition()
+      .duration(600)
+      .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale))
+      .on("end", () => {
+        const nodeScreenX = d.y * scale + offsetX * scale;
+        const nodeScreenY = d.x * scale + offsetY * scale;
+        container.scrollLeft = Math.max(0, nodeScreenX - panelW / 2);
+        container.scrollTop = Math.max(0, nodeScreenY - panelH / 2);
+      });
   }
 
   function esc(s) {
@@ -258,17 +413,23 @@
 
     const found = rootHierarchy.descendants().find((d) => d.data.id === targetId);
     if (found) {
-      selectNode(found);
-      g.selectAll("g.node").classed("highlight", (d) => d.data.id === targetId);
-      setTimeout(() => g.selectAll("g.node").classed("highlight", false), 2500);
+      selectNode(found, { fromSearch: true });
+      g.selectAll("g.node").classed("highlight", (n) => n.data.id === targetId);
+      setTimeout(() => {
+        focusOnNode(found);
+        g.selectAll("g.node").classed("highlight", false);
+      }, DURATION + 50);
     }
   }
 
   function resetView() {
+    scrollToTreePanel(true);
     const t = MOBILE
       ? d3.zoomIdentity.translate(40, 40).scale(0.85)
       : d3.zoomIdentity.translate(80, 56);
     svg.transition().duration(400).call(zoom.transform, t);
+    container.scrollTop = 0;
+    container.scrollLeft = 0;
   }
 
   function bindControls() {
@@ -284,28 +445,26 @@
     document.getElementById("reset-view").addEventListener("click", resetView);
 
     searchInput.addEventListener("input", () => {
-      const q = searchInput.value.trim().toLowerCase();
-      if (q.length < 2) {
+      const q = searchInput.value.trim();
+      const minLen = /[\u0600-\u06FF]/.test(q) ? 1 : 2;
+      if (q.length < minLen) {
         searchResults.classList.add("hidden");
         return;
       }
-      const matches = allNodes
-        .filter(
-          (n) =>
-            (n.name_urdu && n.name_urdu.includes(q)) ||
-            (n.name_en && n.name_en.toLowerCase().includes(q)) ||
-            n.id.toLowerCase().includes(q)
-        )
-        .slice(0, 20);
 
-      searchResults.innerHTML = matches.length
-        ? matches
-            .map(
-              (n) =>
-                `<button type="button" data-id="${esc(n.id)}">${esc(n.name_urdu || n.name_en)}<span class="en">${esc(n.name_en || n.id)}</span></button>`
-            )
-            .join("")
-        : `<button type="button">کوئی نتیجہ نہیں</button>`;
+      const matches = searchPersons(q);
+
+      if (!matches.length) {
+        searchResults.innerHTML = `<button type="button" disabled>کوئی نتیجہ نہیں — املا یا جزو نام آزمائیں</button>`;
+      } else {
+        searchResults.innerHTML = matches
+          .map(({ person: n, score }) => {
+            const primary = n.name_urdu || n.name_en || n.id;
+            const secondary = n.name_urdu && n.name_en ? n.name_en : n.id.replace(/_/g, " ");
+            return `<button type="button" data-id="${esc(n.id)}">${esc(primary)}<span class="en">${esc(secondary)}</span></button>`;
+          })
+          .join("");
+      }
       searchResults.classList.remove("hidden");
     });
 
@@ -314,7 +473,7 @@
       if (!btn) return;
       revealPath(btn.dataset.id);
       searchResults.classList.add("hidden");
-      searchInput.value = "";
+      searchInput.value = btn.textContent.trim().split("\n")[0] || "";
     });
 
     document.addEventListener("click", (ev) => {
@@ -353,9 +512,10 @@
           `${data.stats?.unique_persons || "?"} نام · گہرائی ${data.stats?.max_depth || "?"}`;
 
         buildIndex(data.tree);
+        buildSearchIndex();
         setupSvg();
         rootHierarchy = d3.hierarchy(data.tree);
-        collapseDeep(rootHierarchy, MOBILE ? 1 : 1);
+        collapseDeep(rootHierarchy, 1);
         update(rootHierarchy);
         bindControls();
       })

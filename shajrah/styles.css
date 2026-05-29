@@ -25,6 +25,8 @@ body {
   color: var(--text);
   background: var(--bg-deep);
   overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .backdrop {
@@ -250,18 +252,22 @@ body {
 
   .layout {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(52vh, 1fr) auto;
+    grid-template-rows: auto auto;
     height: auto;
     min-height: 0;
   }
 
   .tree-panel {
-    min-height: 52vh;
+    min-height: 55vh;
+    max-height: none;
     border-bottom: 1px solid var(--line);
   }
 
   #tree-container {
-    min-height: 52vh;
+    min-height: 55vh;
+    max-height: 65vh;
+    overflow: auto;
+    overscroll-behavior: contain;
   }
 
   .detail-panel {
@@ -297,7 +303,7 @@ body {
   overflow: auto;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y;
+  overscroll-behavior: auto;
 }
 
 #tree-container:active { cursor: grabbing; }
@@ -385,6 +391,31 @@ body {
   color: var(--gold-light);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.back-to-tree {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(26, 77, 58, 0.5);
+  color: var(--gold-light);
+  font-family: var(--font-urdu);
+  font-size: 0.9rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.back-to-tree:hover {
+  background: rgba(201, 162, 39, 0.15);
+}
+
+.node.highlight circle.dot {
+  fill: #e8a030;
+  stroke: #fff;
+  stroke-width: 3px;
 }
 
 .detail-panel .en-name {
