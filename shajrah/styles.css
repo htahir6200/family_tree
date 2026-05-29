@@ -67,11 +67,22 @@ body {
   line-height: 1.35;
 }
 
-.header-tagline {
+.header-intro {
   margin-top: 0.65rem;
+  color: var(--cream);
+  font-family: var(--font-urdu);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-tagline {
+  margin-top: 0.45rem;
   color: var(--muted);
   font-family: var(--font-urdu);
-  font-size: 0.92rem;
+  font-size: 0.82rem;
 }
 
 .header-link {
@@ -438,6 +449,14 @@ body {
 .footer-sep {
   margin: 0 0.4rem;
   opacity: 0.5;
+}
+
+.footer-note {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  opacity: 0.85;
 }
 
 /* ——— Feedback ——— */
