@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="شجرہ نسب — ملکان اعوان خاندان کا DIGITAL شجرہ" />
+  <title>شجرہ نسب — اعوان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="title-block">
+        <p class="eyebrow">DIGITAL شجرہ نسب</p>
+        <h1 id="title-urdu"> اعوان</h1>
+        <p id="title-en">Malikan Awan Family Tree</p>
+        <p class="header-intro"> اگر کوئی نام غائب ہو یا تصحیح درکار ہو تو براہِ کرم <a class="header-link" href="#feedback">رائے دیں</a>۔ <a class="header-link" href="#credits">تعارف</a> · <a class="header-link" href="#privacy">رازداری</a></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="search" placeholder="نام تلاش…" autocomplete="off" aria-label="نام تلاش" />
+      <div id="search-results" class="search-results hidden"></div>
+    </div>
+    <div class="toolbar-buttons">
+      <button type="button" id="go-root" class="icon-btn" title="شروع" aria-label="شروع">
+        <span class="btn-icon" aria-hidden="true">🏠</span>
+      </button>
+      <button type="button" id="more-ancestors" class="icon-btn" title="اوپر" aria-label="اوپر">
+        <span class="btn-icon" aria-hidden="true">⬆️</span>
+      </button>
+      <button type="button" id="reset-view" class="icon-btn" title="واپس" aria-label="واپس">
+        <span class="btn-icon" aria-hidden="true">↩️</span>
+      </button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <main class="layout">
+    <section class="tree-panel">
+      <div id="tree-container">
+        <svg id="tree-svg"></svg>
+      </div>
+    </section>
+    <aside class="detail-panel" id="detail-panel">
+      <div class="detail-placeholder">
+        <span class="placeholder-icon" aria-hidden="true">👆</span>
+        <p>درخت میں نام دبائیں</p>
+      </div>
+    </aside>
+  </main>
+
+  <section class="feedback-section" id="feedback">
+    <div class="feedback-inner">
+      <div class="feedback-intro">
+        <h2>رائے اور معلومات</h2>
+        <p>
+          اگر کسی نام، رابطے، یا اولاد میں تصحیح ہے — یا کوئی معلومات شامل کرنی ہے —
+          یہاں لکھیں اور براہِ راست بھیجیں۔
+        </p>
+        <p class="feedback-email-line">
+          <a href="mailto:htahir6200@gmail.com?subject=شجرہ%20نسب%20—%20رائے">htahir6200@gmail.com</a>
+        </p>
+      </div>
+      <form class="feedback-form" id="feedback-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="fb-name">آپ کا نام</label>
+            <input type="text" id="fb-name" name="name" class="urdu-input" placeholder="اختیاری" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="fb-contact">فون / ای میل (واپسی کے لیے)</label>
+            <input type="text" id="fb-contact" name="contact" dir="ltr" placeholder="optional" autocomplete="email" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="fb-type">موضوع</label>
+          <select id="fb-type" name="type">
+            <option value="correction">نام یا رابطے کی تصحیح</option>
+            <option value="new">نئی معلومات / اولاد</option>
+            <option value="question">سوال</option>
+            <option value="other">دیگر</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fb-message">پیغام *</label>
+          <textarea id="fb-message" name="message" class="urdu-input" rows="4" required placeholder="مثلاً: فلاں نام غلط ہے، صحیح نام … والد …"></textarea>
+        </div>
+        <div class="feedback-actions">
+          <button type="submit" class="btn-feedback">بھیجیں</button>
+        </div>
+        <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="credits-section" id="credits">
+    <div class="credits-inner">
+      <h2>تعارف و شکریہ</h2>
+      <p class="credits-subtitle">About &amp; Acknowledgements</p>
+
+      <div class="credits-grid">
+        <div class="credits-block">
+          <h3>ماخذ</h3>
+          <p>
+            یہ شجرہ اصل دستخطی شجرہ نسب پر مبنی ہے — اعوان خاندان کے
+            روایتی نسب نامے جو نسل در نسل محفوظ کیے گئے ہیں۔
+          </p>
+          <p class="credits-en">
+            Based on the original handwritten shajrah — traditional genealogical
+            records of the Awan family, preserved across generations.
+          </p>
+        </div>
+
+        <div class="credits-block credits-highlight">
+          <h3>تالیف و ڈیجیٹائزیشن</h3>
+          <p class="credits-name">ڈاکٹر محمد طاہر عباس</p>
+          <p class="credits-name-en">Dr Muhammad Tahir Abbas</p>
+          <p>
+            ناموں کی تصحیح، درخت کی ترتیب، اور یہ تعاملی ویب سائٹ — Dr Tahir Abbas کی
+            محنت و نگرانی میں تیار کی گئی ہے۔
+          </p>
+          <p class="credits-en">
+            Compilation, verification, tree structure, and this interactive website were
+            prepared under the direction of Dr Muhammad Tahir Abbas.
+          </p>
+          <p class="credits-contact">
+            <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <p class="credits-disclaimer">
+        <strong>نوٹ:</strong> دستخطی دستاویزات اور ڈیجیٹل نقل دونوں میں غلطی ممکن ہے۔
+        براہِ کرم درستگی کی تصدیق کے لیے <a class="header-link" href="#feedback">رائے دیں</a>۔
+      </p>
+    </div>
+  </section>
+
+  <section class="privacy-section" id="privacy">
+    <div class="privacy-inner">
+      <h2>رازداری اور کوکیز</h2>
+      <p class="privacy-subtitle">Privacy &amp; Cookies</p>
+
+      <div class="privacy-block">
+        <p class="privacy-en">
+          If you accept cookies, Google Analytics 4 (GA4) collects anonymous statistics —
+          such as approximate location, device type, browser, pages viewed, and time on site.
+          It does not collect your name or contact details unless you submit the feedback form.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>کوکیز</h3>
+        <p class="privacy-en">
+          GA4 uses cookies. We ask for consent first (Accept / Reject). Reject disables analytics cookies.
+          You can change your choice anytime via Cookie settings in the footer.
+        </p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>رابطہ</h3>
+        <p class="privacy-en">
+          Privacy questions: <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>.
+          Google’s privacy policy: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">policies.google.com/privacy</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-title" id="footer-title">شجرہ نسب — ملکان اعوان</p>
+      <p class="footer-title-en">Malikan Awan Family Tree — Digital Shajrah Nasab</p>
+      <p class="footer-copyright">
+        &copy; <span id="footer-year">2026</span> Dr Muhammad Tahir Abbas. All rights reserved.
+      </p>
+      <p class="footer-legal">
+        Compiled and published by Dr Muhammad Tahir Abbas. The genealogical data and this
+        website may not be reproduced or redistributed without permission.
+      </p>
+      <p class="footer-links">
+        <a href="#feedback">رائے</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="mailto:htahir6200@gmail.com">htahir6200@gmail.com</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#credits">تعارف</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#privacy">رازداری</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#" id="cookie-settings-footer">کوکیز</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner-inner">
+      <p id="cookie-banner-title" class="cookie-banner-text">
+        <strong>کوکیز</strong> — سائٹ بہتر بنانے کے لیے Google Analytics سے گمنام اعداد و شمار (ملک، آلہ، صفحات)۔
+        <a class="header-link" href="#privacy">مزید پڑھیں</a>
+      </p>
+      <p class="cookie-banner-en">
+        We use Google Analytics cookies for anonymous visit statistics (location, device, pages) to improve the site.
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-accept">قبول / Accept</button>
+        <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-reject">مسترد / Reject</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="site-config.js"></script>
+  <script src="analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="app.js"></script>
+  <script src="feedback.js"></script>
+</body>
+</html>

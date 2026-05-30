@@ -1,0 +1,33 @@
+{
+  "PHOTO-2025-10-11-21-12-23.jpg": { "refs": ["5057"], "label": "گلگاں میر — خانی زمان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-23_1.jpg": { "refs": ["5060"], "label": "ملتان میرل — محمد گل", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-23_2.jpg": { "refs": ["5056"], "label": "ملتان جمیل — میر زمان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-23_3.jpg": { "refs": ["5059"], "label": "ملکاں جبرل — برخوردار", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24.jpg": { "refs": ["5043", "5044"], "label": "کلاگان جبل — نادر / اعظم دین", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-24_1.jpg": { "refs": ["5058"], "label": "ملتان جلال — احمد گل", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_2.jpg": { "refs": ["5051"], "label": "ملکان میر — عبدالکریم", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_3.jpg": { "refs": ["5056"], "label": "ملکان میر — میر زمان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_4.jpg": { "refs": ["5048"], "label": "ملکان میرل — خوشی محمد", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_5.jpg": { "refs": ["5054"], "label": "ملکان میر — گل زمان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_6.jpg": { "refs": ["5046"], "label": "ملتان جلال — میر سلطان", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-24_7.jpg": { "refs": ["5057"], "label": "گلگاں میر — خانی زمان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_8.jpg": { "refs": ["5044"], "label": "بوستان خان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_9.jpg": { "refs": ["5042"], "label": "ملکان جیرل — فیض عالم / سلطان محمد", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-24_10.jpg": { "refs": ["5053"], "label": "ملتان جلال — دوست محمد", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_11.jpg": { "refs": ["5050"], "label": "ملتان میر — کالو (مرکزی)", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_12.jpg": { "refs": ["5052"], "label": "سید عالم", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_13.jpg": { "refs": ["5047"], "label": "ملکان حبر — محمد خان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_14.jpg": { "refs": ["5045"], "label": "شیر خان / محمد خان", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_15.jpg": { "refs": ["5049"], "label": "جمال الدین / بشیر احمد", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-24_16.jpg": { "refs": ["5055"], "label": "محمد یوسف / حیات محمد", "reviewed": false },
+  "PHOTO-2025-10-11-21-12-25.jpg": { "refs": ["5040"], "label": "ملگان مریل — مرزا / مستار خان", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-25_1.jpg": { "refs": ["5037"], "label": "ملتان — خیر اعوان", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-25_2.jpg": { "refs": ["5041"], "label": "ملکان جبل — محمد علی (مرکزی)", "reviewed": true },
+  "PHOTO-2025-10-11-21-12-25_3.jpg": {
+    "refs": ["5039"],
+    "cross_refs": ["5040"],
+    "label": "ملکان مری — حاتم بن نامہ",
+    "reviewed": true
+  },
+  "PHOTO-2025-10-11-21-12-25_4.jpg": { "refs": ["5038"], "label": "ملکان حیل — قطب حیدر شاہ", "reviewed": true }
+}
